@@ -15,3 +15,9 @@ Database: MongoDB
 •	Login with Unique id: Staff_id/Patient_id & password  
 •	Staff Login: Display Schedule for the day  
 •	Patient Login: Subtabs: Appointments, Records, Payment Portal  
+
+## Timeline
+1/10/22  - Basic structure of project & gather resources  
+15/10/22 - Complete Frontend aspect of the website  
+15/11/22 - Complete Backend aspect of the website  
+27/11/22 - Link frontend with database & final testing/debugging  
