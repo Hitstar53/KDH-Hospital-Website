@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 #myInput {
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
@@ -8,14 +9,12 @@
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
-
 #myUL {
   /* Remove default list styling */
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 #myUL li a {
   border: 1px solid #ddd; /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
@@ -26,121 +25,249 @@
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
 }
-
 #myUL li a:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
-
- .u-section-1 {
-  background-image: none;
+/* Style for about.html*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.u-section-1 .u-sheet-1 {
-  min-height: 588px;
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ddd;
 }
 
-.u-section-1 .u-layout-wrap-1 {
-  margin: 60px auto 60px 0;
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
 }
 
-.u-section-1 .u-layout-cell-1 {
-  min-height: 533px;
+.content-section {
+  float: left;
+  width: 55%;
 }
 
-.u-section-1 .u-container-layout-1 {
-  padding: 30px;
+.image-section {
+  float: right;
+  width: 40%;
 }
 
-.u-section-1 .u-text-1 {
-  font-weight: 700;
-  line-height: 43px;
+.image-section img {
+  width: 125%;
+  height: auto;
+}
+
+.content-section .title {
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+.content-section .content h3 {
+  margin-top: 20px;
+  color: #5d5d5d;
+  font-size: 21px;
+}
+
+.content-section .content p {
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content-section .content .button {
+  margin-top: 30px;
+}
+
+.content-section .content .button a {
+  background-color: #3d3d3d;
+  padding: 12px 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+
+.content-section .content .button a:hover {
+  background-color: #a52a2a;
+  color: #fff;
+}
+
+.content-section .social {
+  margin: 40px 40px;
+}
+
+.content-section .social i {
+  color: #a52a2a;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.content-section .social i:hover {
+  color: #3d3d3d;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .content-section {
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .image-section {
+    float: none;
+    width: 100%;
+
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .content-section .title {
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .content-section .content .button {
+    text-align: center;
+  }
+
+  .content-section .content .button a {
+    padding: 9px 30px;
+  }
+
+  .content-section .social {
+    text-align: center;
+  }
+
+}
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.u-section-1 .u-line-1 {
-  width: 100px;
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 0 0 70px;
+}
+
+.footer-col-1 {
+  width: 80%;
+  padding: 0 0 0 50px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
   height: 2px;
-  margin: 20px auto 0 0;
+  box-sizing: border-box;
+  width: 60px;
 }
 
-.u-section-1 .u-text-2 {
-  font-size: 1rem;
-  margin: 30px 0 0;
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
-.u-section-1 .u-image-1 {
-  min-height: 533px;
-  background-image: url("https://images.pexels.com/photos/2182979/pexels-photo-2182979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-position: 50% 16.29%;
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
 }
 
-.u-section-1 .u-container-layout-2 {
-  padding: 30px;
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
 }
 
-@media (max-width: 1199px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 485px;
-  }
-
-  .u-section-1 .u-layout-wrap-1 {
-    margin-right: initial;
-    margin-left: initial;
-  }
-
-  .u-section-1 .u-layout-cell-1 {
-    min-height: 100px;
-  }
-
-  .u-section-1 .u-line-1 {
-    width: 82px;
-  }
-
-  .u-section-1 .u-image-1 {
-    min-height: 439px;
-  }
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
 }
 
-@media (max-width: 991px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 371px;
-  }
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
 
-  .u-section-1 .u-line-1 {
-    width: 63px;
-  }
-
-  .u-section-1 .u-image-1 {
-    min-height: 336px;
+/*responsive*/
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
   }
 }
 
-@media (max-width: 767px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 100px;
-  }
-
-  .u-section-1 .u-container-layout-1 {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .u-section-1 .u-line-1 {
-    width: 59px;
-  }
-
-  .u-section-1 .u-image-1 {
-    min-height: 504px;
-  }
-
-  .u-section-1 .u-container-layout-2 {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media (max-width: 575px) {
-  .u-section-1 .u-image-1 {
-    min-height: 317px;
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
   }
 }
