@@ -1,0 +1,20 @@
+{
+  "name": "hospital-portal-website",
+  "version": "1.0.0",
+  "description": "Aim: We aim to create a robust website to better connect the patients and their respective doctors of the hospital and also create a prototype for an online payment system.  \r ## Tech Stack:  \r Frontend: HTML,CSS,JS   \r Backend: Python – Flask+PyMongo(frameworks)    \r Database: MongoDB",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hitstar53/Hospital-Portal-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hitstar53/Hospital-Portal-Website/issues"
+  },
+  "homepage": "https://github.com/Hitstar53/Hospital-Portal-Website#readme"
+}
