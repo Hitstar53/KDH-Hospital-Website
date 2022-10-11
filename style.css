@@ -496,6 +496,22 @@ header .fa-times{
 
 }
 
+.login a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 12px;
+  Letter-spacing: 2px;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.login a:hover {
+  background-color: #0188DF;
+  color: #fee;
+  transition: 0.25s;
+}
+
 .signup a{
   text-decoration: none;
   color: #000;
