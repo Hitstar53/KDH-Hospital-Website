@@ -385,7 +385,7 @@ header .fa-bars{
   color:var(--black);
 }
 
-/*.footer{
+.footer{
   background:var(--black);
 }
 
@@ -434,7 +434,7 @@ header .fa-bars{
 
 .footer .credit span{
   color:var(--blue);
-}*/
+}
 
 header .fa-times{
   transform: rotate(180deg);
