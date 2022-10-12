@@ -1,4 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
 .footer {
     background-color: #24262b;
     padding: 70px 0;
@@ -6,7 +26,7 @@
 
 .footer-col {
     width: 25%;
-    padding: 0 0 0 70px;
+    padding: 0 0 0 50px;
 }
 
 .footer-col-1 {
@@ -77,6 +97,10 @@
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .footer-col-1 {
+        width: 80%;
+        padding: 0;
     }
 }
 

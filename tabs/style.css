@@ -9,7 +9,7 @@
   font-family: 'Roboto', sans-serif;
   margin:0; padding:0;
   box-sizing: border-box;
-  border:none !important;
+  /*border:none !important;*/
   outline: none !important;
   text-decoration: none !important;
   text-transform: capitalize;

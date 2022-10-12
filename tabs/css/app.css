@@ -1,32 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-image: url(''); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 100%; /* Full-width */
   font-size: 16px; /* Increase font-size */
+  font-weight: 500;
+  text-align: center;
   padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
+  border: 1px solid black; /* Add a grey border */
+  margin-top: 12px;
   margin-bottom: 12px; /* Add some space below the input */
 }
 #myUL {
   /* Remove default list styling */
   list-style-type: none;
-  padding: 0;
+  padding-bottom: 150px;
   margin: 0;
 }
 #myUL li a {
-  border: 1px solid #ddd; /* Add a border to all links */
+  border: 1px solid rgb(177, 177, 177); /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; /* Grey background color */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove default text underline */
   font-size: 18px; /* Increase the font-size */
+  font-weight: bold;
+  text-align: center;
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
 }
 #myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
+  background-color: rgb(212, 211, 211); /* Add a hover effect to all links, except for headers */
+}
+.doctor_heading h1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /* Style for about.html*/
 * {
@@ -192,7 +204,7 @@ ul {
 
 .footer-col {
   width: 25%;
-  padding: 0 0 0 70px;
+  padding: 0 0 0 50px;
 }
 
 .footer-col-1 {
@@ -264,6 +276,10 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
+    .footer-col-1 {
+      width: 80%;
+      padding: 0;
+    }
 }
 
 @media(max-width: 574px) {
