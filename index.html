@@ -13,17 +13,24 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- custom css file link  -->
+    <link rel="stylesheet" href="tabs/css/footer.css">
     <link rel="stylesheet" href="style.css">
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#footer').load('tabs/reusefooter.html');
+        });
+    </script>
 </head>
 <body> 
-
 <!-- header section starts  -->
 <header>
     <div class="container">
         <a href="#" class="logo"><span>KDH</span> Hospital</a>
         <nav class="nav">
             <ul>
-                <li><a href="C:\Users\sidco\Desktop\Hospital-Portal-Website\index.html">Home</a></li>
+                <li><a href="..\index.html">Home</a></li>
                 <li><a href="tabs/patients.html">Patients</a></li>
                 <li><a href="tabs/doctors.html">Doctors</a></li>
                 <li><a href="tabs/services.html">Services</a></li>
@@ -209,7 +216,7 @@
 <!-- post section ends -->
 
 <!-- footer section starts  -->
-<section class="footer">
+<!--<section class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4" data-aos="fade-right">
@@ -233,7 +240,10 @@
         </div>
     </div>
     <h1 class="credit text-center mx-auto">created by <span>Hatim, Kaif & Dhruv</span> | all rights reserved.</h1>
-</section>
+</section> -->
+<footer class="footer">
+    <div id="footer"></div>
+</footer>
 <!-- footer section ends -->
 
 <!-- jquery cdn link  -->

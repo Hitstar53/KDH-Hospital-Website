@@ -15,14 +15,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="style.css">
+  <!-- jquery cdn link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('#footer').load('reusefooter.html');
+    });
+  </script>
 </head>
 <body>
-  <header>
+  <header id="about_head">
     <div class="container">
         <a href="#" class="logo"><span>KDH</span> Hospital</a>
         <nav class="nav">
           <ul>
-            <li><a href="C:\Users\sidco\Desktop\Hospital-Portal-Website\index.html">Home</a></li>
+            <li><a href="..\index.html">Home</a></li>
             <li><a href="patients.html">Patients</a></li>
             <li><a href="doctors.html">Doctors</a></li>
             <li><a href="services.html">Services</a></li>
@@ -62,5 +69,22 @@
   
 </ul>
   </footer>
+  <footer class="footer">
+    <div id="footer"></div>
+  </footer>
+  <!-- jquery cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- magnific popup js link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- aos js file cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- custom js link  -->
+  <script src="../main.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      delay: 400
+    });
+  </script>
 </body>
 </html>

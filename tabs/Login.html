@@ -5,8 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Portal</title>
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#footer').load('reusefooter.html');
+        });
+    </script>
 </head>
 <body>
-    Welcome to the Login Portal!
+    <header id="about_head">
+        <div class="container">
+            <a href="#" class="logo"><span>KDH</span> Hospital</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="..\index.html">Home</a></li>
+                    <li><a href="patients.html">Patients</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                        <div class="signup">
+                            <a href="login.html">Login</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="signup">
+                            <a href="signup.html">Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </div>
+    </header>
+    <div id="sign_foot">
+        <div class="container body-content">
+            <div class="container">
+                <div class="row justify-content-start" style="padding-top:10px;">
+                    <h1>Login Page</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div id="footer"></div>
+    </footer>
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- magnific popup js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- aos js file cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- custom js link  -->
+    <script src="../main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            delay: 400
+        });
+    </script>
 </body>
 </html>

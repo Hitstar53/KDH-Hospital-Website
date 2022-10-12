@@ -385,7 +385,7 @@ header .fa-bars{
   color:var(--black);
 }
 
-.footer{
+/*.footer{
   background:var(--black);
 }
 
@@ -434,7 +434,7 @@ header .fa-bars{
 
 .footer .credit span{
   color:var(--blue);
-}
+}*/
 
 header .fa-times{
   transform: rotate(180deg);
@@ -512,17 +512,17 @@ header .fa-times{
   transition: 0.25s;
 }
 
-.signup a{
+.signup a {
   text-decoration: none;
   color: #000;
   padding: 5px 12px;
   Letter-spacing: 2px;
   font-size: 20px;
-  border: 2px solid #000;
   border-radius: 8px;
 }
-.signup a:hover{
-  background-color: #0188DF;
+
+.signup a:hover {
+  background-color: indigo;
   color: #fee;
   transition: 0.25s;
 }

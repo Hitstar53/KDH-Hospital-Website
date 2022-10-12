@@ -9,7 +9,6 @@
   font-family: 'Roboto', sans-serif;
   margin:0; padding:0;
   box-sizing: border-box;
-  border:none !important;
   outline: none !important;
   text-decoration: none !important;
   text-transform: capitalize;
@@ -503,11 +502,10 @@ header .fa-times{
   padding: 5px 12px;
   Letter-spacing: 2px;
   font-size: 20px;
-  border: 2px solid #000;
   border-radius: 8px;
 }
 .signup a:hover{
-  background-color: #0188DF;
+  background-color: indigo;
   color: #fee;
   transition: 0.25s;
 }
@@ -526,7 +524,3 @@ header .fa-times{
   padding-left: 20px;
   padding-right: 20px;
 }
-
-/* .form-control {
-  border: 10px solid black;
-} */
