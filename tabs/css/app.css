@@ -158,7 +158,8 @@
 
   .content-section .title {
     text-align: center;
-    font-size: 19px;
+    font-size: 30px;
+    font-weight: 400;
   }
 
   .content-section .content .button-abt {
@@ -170,6 +171,9 @@
   }
 
   .content-section .social {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
   }
 

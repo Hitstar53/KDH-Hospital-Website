@@ -68,10 +68,10 @@
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
                         <div class="col" style="padding-top:10px;">
-                            <input class="form-control" required></input>
+                            <input placeholder="Name" class="form-control" required></input>
                         </div>
                         <div class="col" style="padding-top:10px;">
-                            <input class="form-control" required></input>
+                            <input placeholder="Surname" class="form-control" required></input>
                         </div>
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
@@ -84,10 +84,10 @@
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
                         <div class="col" style="padding-top:10px;">
-                            <input type="number" class="form-control"></input>
+                            <input type="number" placeholder="Mobile Number" class="form-control"></input>
                         </div>
                         <div class="col" style="padding-top:10px;">
-                            <input type="email" class="form-control" required></input>
+                            <input type="email" placeholder="Enter Email" class="form-control" required></input>
                         </div>
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
@@ -100,10 +100,10 @@
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
                         <div class="col" style="padding-top:10px;">
-                            <input type="password" class="form-control" required></input>
+                            <input type="password" placeholder="Enter Password" id="pswrd" class="form-control" required></input>
                         </div>
                         <div class="col" style="padding-top:10px;">
-                            <input type="password" class="form-control" required></input>
+                            <input type="password" placeholder="Enter Password" id="pswrd" class="form-control" required></input>
                         </div>
                     </div>
                     <div class="row justify-content-center" style="padding-top:10px;">
@@ -133,19 +133,6 @@
             duration: 1000,
             delay: 400
         });
-    </script>
-    <script>
-        function show() {
-            var x = document.getElementById("pswrd");
-            var y = document.getElementById("togglePassword");
-            if (x.type === "password") {
-                x.type = "text";
-                y.style.color = "#7f2092";
-            } else {
-                x.type = "password";
-                y.style.color = "#a3a2a2";
-            }
-        }
     </script>
 </body>
 </html>

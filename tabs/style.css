@@ -526,14 +526,6 @@ header .fa-times{
     opacity: 1;
   }
 
-  .contact form .inputBox input, select{
-    width: 100%;
-  }
-
-  .contact form input[type="submit"]{
-    width:100%;
-  }
-
 }
 
 #signup {
@@ -572,7 +564,7 @@ header .fa-times{
 }
 
 .col {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .col i {
