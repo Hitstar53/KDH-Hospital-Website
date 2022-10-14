@@ -141,6 +141,37 @@ header .fa-bars{
   display: none;
 }
 
+.login a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 12px;
+  Letter-spacing: 2px;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.login a:hover {
+  background-color: #0188DF;
+  color: #fee;
+  transition: 0.25s;
+}
+
+.signup a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 12px;
+  Letter-spacing: 2px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.signup a:hover {
+  background-color: indigo;
+  color: #fee;
+  transition: 0.25s;
+}
+
 .home .content h1{
   font-size: 5rem;
   color:var(--black);
@@ -458,7 +489,7 @@ header .fa-times{
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 100vh rgba(0,0,0,.3);
     border-radius: .5rem;
-    border:.3rem solid var(--blue) !important;
+    border: .3rem solid var(--blue) !important;
     background:#fff;
     width: 95%;
     opacity: 0;
@@ -467,18 +498,35 @@ header .fa-times{
   header .nav ul{
     width: 100%;
     flex-flow: column;
-    padding:2rem 0;
+    padding: 0;
   }
-
+  
   header .nav ul li{
     width: 100%;
     text-align: center;
-    margin:1rem 0;
+    margin: 0;
+    padding: 1rem 0;
+    /*border-bottom: 1px var(--blue) solid;*/
   }
 
   header .nav ul li a{
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: block;
+  }
+
+  .signup a {
+    padding: 0;
+  }
+  .signup a:hover {
+    background: none;
+    color: #fff;
+  }
+  header .nav ul li:hover{
+    background-color: var(--blue);
+    border-radius: 0%;
+  }
+  header .nav ul li a:hover{
+    color: #ffff;
   }
 
   header .nav-toggle{
@@ -494,35 +542,4 @@ header .fa-times{
     width:100%;
   }
 
-}
-
-.login a {
-  text-decoration: none;
-  color: #000;
-  padding: 5px 12px;
-  Letter-spacing: 2px;
-  font-size: 20px;
-  border: 2px solid #000;
-  border-radius: 8px;
-}
-
-.login a:hover {
-  background-color: #0188DF;
-  color: #fee;
-  transition: 0.25s;
-}
-
-.signup a {
-  text-decoration: none;
-  color: #000;
-  padding: 5px 12px;
-  Letter-spacing: 2px;
-  font-size: 20px;
-  border-radius: 8px;
-}
-
-.signup a:hover {
-  background-color: indigo;
-  color: #fee;
-  transition: 0.25s;
 }

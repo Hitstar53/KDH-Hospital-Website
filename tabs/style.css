@@ -3,6 +3,12 @@
 :root{
   --blue:#0188DF;
   --black:#354046;
+  --fros-blue-color: #0050d5;
+  --light-blue-color: #16c5ff;
+  --dark-color: #202020;
+  --light-gray: #dedede;
+  --dark-gray: #a1a1a0;
+  --light-color: #fff;
 }
 
 *{
@@ -15,6 +21,8 @@
   text-transform: capitalize;
   font-weight: 400;
   transition: all .2s linear;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *::selection{
@@ -133,6 +141,21 @@ header .nav ul li{
 
 header .nav ul li a{
   font-size: 2rem;
+}
+
+.signup a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 12px;
+  Letter-spacing: 2px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.signup a:hover {
+  background-color: indigo;
+  color: #fee;
+  transition: 0.25s;
 }
 
 header .fa-bars{
@@ -459,7 +482,7 @@ header .fa-times{
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 100vh rgba(0,0,0,.3);
     border-radius: .5rem;
-    border:.3rem solid var(--blue) !important;
+    border: .3rem solid var(--blue) !important;
     background:#fff;
     width: 95%;
     opacity: 0;
@@ -468,20 +491,36 @@ header .fa-times{
   header .nav ul{
     width: 100%;
     flex-flow: column;
-    padding:2rem 0;
+    padding: 0;
   }
 
   header .nav ul li{
     width: 100%;
     text-align: center;
-    margin:1rem 0;
+    margin: 0;
+    padding: 1rem 0;
+    /*border-bottom: 1px solid var(--blue) !important;*/
   }
 
   header .nav ul li a{
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: block;
   }
 
+  .signup a {
+    padding: 0;
+  }
+  .signup a:hover {
+    background: none;
+    color: #fff;
+  }
+  header .nav ul li:hover{
+    background-color: var(--blue);
+    border-radius: 0%;
+  }
+  header .nav ul li a:hover{
+    color: #ffff;
+  }
   header .nav-toggle{
     top:50%;
     opacity: 1;
@@ -495,20 +534,6 @@ header .fa-times{
     width:100%;
   }
 
-}
-
-.signup a{
-  text-decoration: none;
-  color: #000;
-  padding: 5px 12px;
-  Letter-spacing: 2px;
-  font-size: 20px;
-  border-radius: 8px;
-}
-.signup a:hover{
-  background-color: indigo;
-  color: #fee;
-  transition: 0.25s;
 }
 
 #signup {
