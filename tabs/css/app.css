@@ -78,13 +78,14 @@
 
 .content-section .title {
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .content-section .content h3 {
   margin-top: 20px;
   color: #5d5d5d;
-  font-size: 21px;
+  font-size: 20px;
 }
 
 .content-section .content p {
@@ -94,36 +95,37 @@
   line-height: 1.5;
 }
 
-.content-section .content .button {
+.content-section .content .button-abt {
   margin-top: 30px;
 }
 
-.content-section .content .button a {
-  background-color: #3d3d3d;
-  padding: 12px 40px;
+.content-section .content .button-abt a {
+  background-color: indigo;
+  padding: 12px 30px;
   text-decoration: none;
   color: #fff;
-  font-size: 25px;
-  letter-spacing: 1.5px;
+  font-size: 18px;
+  border-radius: 25px;
 }
 
-.content-section .content .button a:hover {
-  background-color: #a52a2a;
+.content-section .content .button-abt a:hover {
+  background-color: black;
   color: #fff;
 }
 
 .content-section .social {
-  margin: 40px 40px;
+  margin: auto;
+  margin-top: 40px;
 }
 
 .content-section .social i {
-  color: #a52a2a;
+  color: indigo;
   font-size: 30px;
   padding: 0px 10px;
 }
 
 .content-section .social i:hover {
-  color: #3d3d3d;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -144,7 +146,7 @@
   .image-section {
     float: none;
     width: 100%;
-
+    padding-bottom: 69px;
   }
 
   .image-section img {
@@ -159,11 +161,11 @@
     font-size: 19px;
   }
 
-  .content-section .content .button {
+  .content-section .content .button-abt {
     text-align: center;
   }
 
-  .content-section .content .button a {
+  .content-section .content .button-abt a {
     padding: 9px 30px;
   }
 
