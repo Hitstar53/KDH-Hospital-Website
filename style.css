@@ -3,6 +3,12 @@
 :root{
   --blue:#0188DF;
   --black:#354046;
+  --fros-blue-color: #0050d5;
+  --light-blue-color: #16c5ff;
+  --dark-color: #202020;
+  --light-gray: #dedede;
+  --dark-gray: #a1a1a0;
+  --light-color: #fff;
 }
 
 *{
@@ -488,10 +494,9 @@ header .fa-times{
     top:-100rem; left:50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 100vh rgba(0,0,0,.3);
-    border-radius: .5rem;
-    border: .3rem solid var(--blue) !important;
+    border-radius: 2rem;
     background:#fff;
-    width: 95%;
+    width: 90%;
     opacity: 0;
   }
 
@@ -522,13 +527,11 @@ header .fa-times{
     color: #fff;
   }
   header .nav ul li:hover{
-    background-color: var(--blue);
-    border-radius: 0%;
+    background-color: rgb(199, 224, 232);
   }
   header .nav ul li a:hover{
-    color: #ffff;
+    color: black;
   }
-
   header .nav-toggle{
     top:50%;
     opacity: 1;
