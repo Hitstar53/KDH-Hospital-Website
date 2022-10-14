@@ -18,7 +18,7 @@
   /*border:none !important;*/
   outline: none !important;
   text-decoration: none !important;
-  text-transform: capitalize;
+  text-transform: none !important;
   font-weight: 400;
   transition: all .2s linear;
   -webkit-box-sizing: border-box;
@@ -546,9 +546,16 @@ header .fa-times{
 
 #sign_butt {
   font-size: 15px;
+  background-color: var(--fros-blue-color);
+  border: none;
+  border-radius: 20px;
   padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#sign_butt:hover {
+  background-color: indigo;
 }
 
 #login_butt {
@@ -558,4 +565,24 @@ header .fa-times{
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#login_butt:hover {
+  background-color: #000;
+}
+
+.col {
+  font-size: 20px;
+}
+
+.col i {
+  position: absolute;
+  color: #a3a2a2;
+  font-size: 18px;
+  margin-top: -25px;
+  margin-left: 310px;
+}
+
+.resetheader i {
+  color: black;
 }

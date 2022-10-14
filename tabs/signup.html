@@ -51,11 +51,12 @@
                 <div class="fas fa-bars"></div>
             </div>
         </header>
+        <form>
         <div id="sign_foot">
             <div class="container body-content">
                 <div class="container">
-                    <div class="row justify-content-start" style="padding-top:70px;">
-                        <h1>Sign Up Page</h1>
+                    <div class="row justify-content-start" style="padding-top:70px;padding-left:14px;font-size:30px;font-weight:bold">
+                        Sign Up Page
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
                         <div class="col" style="padding-top:10px;">
@@ -67,10 +68,10 @@
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
                         <div class="col" style="padding-top:10px;">
-                            <input class="form-control"></input>
+                            <input class="form-control" required></input>
                         </div>
                         <div class="col" style="padding-top:10px;">
-                            <input class="form-control"></input>
+                            <input class="form-control" required></input>
                         </div>
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
@@ -86,7 +87,7 @@
                             <input type="number" class="form-control"></input>
                         </div>
                         <div class="col" style="padding-top:10px;">
-                            <input class="form-control"></input>
+                            <input type="email" class="form-control" required></input>
                         </div>
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
@@ -94,27 +95,28 @@
                             <label>Password</label>
                         </div>
                         <div class="col" style="padding-top:10px;">
-                            <label>Continue Password</label>
+                            <label>Confirm Password</label>
                         </div>
                     </div>
                     <div class="row justify-content-start" style="padding-top:10px;">
                         <div class="col" style="padding-top:10px;">
-                            <input type="password" class="form-control"></input>
+                            <input type="password" class="form-control" required></input>
                         </div>
                         <div class="col" style="padding-top:10px;">
-                            <input type="password" class="form-control"></input>
+                            <input type="password" class="form-control" required></input>
                         </div>
                     </div>
                     <div class="row justify-content-center" style="padding-top:10px;">
-                        <label><input type="checkbox" /> I agree to <a href=about.html>Terms and Conditions</a></label>
+                        <label><input type="checkbox" /> I agree to <a href=about.html style="font-weight:bold;">Terms and Conditions</a></label>
                     </div>
-                    <div class="row justify-content-end" style="padding-top:10px;padding-bottom: 220px;">
+                    <div class="row justify-content-center" style="padding-top:10px;padding-bottom: 220px;">
                         <button type="submit" class="btn btn-primary" id="sign_butt">SIGN UP</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </form>
     <footer class="footer">
         <div id="footer"></div>
     </footer>
@@ -131,6 +133,19 @@
             duration: 1000,
             delay: 400
         });
+    </script>
+    <script>
+        function show() {
+            var x = document.getElementById("pswrd");
+            var y = document.getElementById("togglePassword");
+            if (x.type === "password") {
+                x.type = "text";
+                y.style.color = "#7f2092";
+            } else {
+                x.type = "password";
+                y.style.color = "#a3a2a2";
+            }
+        }
     </script>
 </body>
 </html>

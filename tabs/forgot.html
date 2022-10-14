@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Portal</title>
+    <title>forgot password</title>
     <!-- aos css file cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!-- magnific popup css cdn link  -->
@@ -24,7 +24,6 @@
     </script>
 </head>
 <body>
-    <form>
     <div id="signup">
     <header id="about_head">
         <div class="container">
@@ -52,26 +51,30 @@
             <div class="fas fa-bars"></div>
         </div>
     </header>
+    <form>
     <div id="sign_foot">
         <div class="container body-content">
             <div class="container">
-                <div class="row justify-content-start" style="padding-top:70px;padding-left:14px;font-size:30px;font-weight:bold">
-                    Login Portal
+                <div class="row justify-content-start" style="padding-top:70px;padding-left:14px;font-size:30px;">
+                    <div class="resetheader">
+                        <a href="Login.html"><i class="fas fa-arrow-circle-left"></i></a>
+                    </div>
+                    <p style="padding-left:10px;font-weight:bold">Reset Password<p>
                 </div>
                 <div class="row justify-content-start" style="padding-top:10px;font-size:18px;">
                     <div class="col" style="padding-top:10px;">
-                        <label>Login id</label>
+                        <label>Email</label>
                     </div>
                 </div>
                 <div class="row justify-content-start" style="width: 375px;">
                     <div class="col" style="padding-top:10px;">
-                        <input type="text" placeholder="Enter id" class="form-control" required></input>
+                        <input type="email" placeholder="Enter Email" class="form-control" required></input>
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
                 <div class="row justify-content-start" style="padding-top:10px;font-size:18px;">
                     <div class="col" style="padding-top:10px;">
-                        <label>Password</label>
+                        <label>New Password</label>
                     </div>
                 </div>
                 <div class="row justify-content-start" style="width: 375px;">
@@ -80,19 +83,19 @@
                         <i class="fas fa-eye" id="togglePassword" onclick="show()"></i>
                     </div>
                 </div>
-                <div id="form-other" class="row justify-content-start" style="padding-top:20px;padding-left: 16px;">
-                    <div class="checkbox">
-                        <label><input type="checkbox" /> Remember Me</label>
+                <div class="row justify-content-start" style="padding-top:10px;font-size:18px;">
+                    <div class="col" style="padding-top:10px;">
+                        <label>Confirm Password</label>
                     </div>
-                    <a href="forgot.html" style="padding-left: 85px;">Forgot Password?</a>
                 </div>
-                <div class="row justify-content-start" style="padding-top:20px;padding-left:15px;">
-                    <button type="submit" class="btn btn-primary" id="login_butt">Login</button>
-                </div>
-                <div class="row justify-content-start" style="padding-top:5px;font-size:16px;padding-bottom:300px;padding-left:15px;">
-                    <div class="extra" style="padding-top:10px;">
-                        Don't have an account? <a href="signup.html" style="font-weight:bold;">Sign Up</a>
+                <div class="row justify-content-start" style="width: 375px;">
+                    <div class="col" style="padding-top:10px;">
+                        <input type="password" placeholder="Enter Password" id="pswrd" class="form-control" required></input>
+                        <i class="fas fa-eye" id="togglePassword" onclick="show()"></i>
                     </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:20px;padding-left:15px;padding-bottom:350px;">
+                    <button type="submit" class="btn btn-primary" id="login_butt">Submit</button>
                 </div>
             </div>
         </div>
