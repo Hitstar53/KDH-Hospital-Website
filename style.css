@@ -527,7 +527,7 @@ header .fa-times{
     color: #fff;
   }
   header .nav ul li:hover{
-    background-color: rgb(199, 224, 232);
+    background-color: #c7e0e8;
   }
   header .nav ul li a:hover{
     color: black;
