@@ -41,19 +41,19 @@ section{
   overflow: hidden;
 }
 
-.button{
-  height:3.5rem;
+.button {
+  height: 4rem;
   width: 15rem;
-  background:var(--blue);
+  background: var(--fros-blue-color);
   color:#fff;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   text-transform: capitalize;
-  border-radius: .5rem;
+  border-radius: 3rem;
   cursor: pointer;
   position: relative;
   z-index: 0;
   overflow: hidden;
-  margin:1rem 0;
+  margin: 3rem 0;
 }
 
 .button::before{
@@ -62,9 +62,9 @@ section{
   top: -100%; left: 0;
   height:100%;
   width: 100%;
-  background-color: var(--black);
+  background-color: black;
   z-index: -1;
-  transition: .2s linear;
+  transition: .1s linear;
 }
 
 .button:hover:before{
@@ -72,7 +72,7 @@ section{
 }
 
 .button:hover{
-  box-shadow: .1rem .5rem var(--blue),
+  box-shadow: .1rem .5rem var(--fros-blue-color),
               0 .3rem .5rem rgba(0,0,0,.3);
 }
 
@@ -517,6 +517,12 @@ header .fa-times{
   header .nav ul li a{
     font-size: 2.5rem;
     display: block;
+  }
+
+  .button {
+    font-size: large;
+    width: 15rem;
+    height: 4.5rem;
   }
 
   .signup a {
