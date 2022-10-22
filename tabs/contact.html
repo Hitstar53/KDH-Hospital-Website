@@ -26,7 +26,7 @@
 <body>
   <header id="about_head">
     <div class="container">
-        <a href="#" class="logo"><span>KDH</span> Hospital</a>
+        <a href="..\index.html" class="logo"><span>KDH</span> Hospital</a>
         <nav class="nav">
           <ul>
             <li><a href="..\index.html">Home</a></li>
@@ -51,11 +51,87 @@
     </div>
     </header>
     <div class="contact" style="padding-top: 69px;">
-        
     </div>
-    <!-- contact section starts  -->
-    
-    <!-- contact section ends -->
+    <!--info-section start-->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row min-vh-100 align-items-center">
+          <div class="col-md-6 content" data-aos="fade-right">
+            <div class="title" style="font-size:35px;font-weight:500;color:#666;padding-left:10px;padding-bottom:25px;padding-top: 70px;">
+              <i class="fas fa-phone-alt" style="color:#0188DF"></i> Contact Info
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-ambulance"></i> Ambulance Services </h3>
+              <p>24x7 Fast Ambulance Services.</p>
+              <p>Call us at: <span>1800-123-4567</span></p>
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-procedures"></i> Emergency Rooms </h3>
+              <p>Well equipped rooms with 24x7 Expert Doctor support.</p>
+              <p>Call us at: <span>040-4344-4567</span></p>
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-stethoscope"></i> Health Check-Ups </h3>
+              <p>Full body check, blood sugar, blood pressure, heart health check, WBC & RBC count check, etc.</p>
+              <p>Call us at: <span>186-0500-0202</span></p>
+            </div>
+            <div class="box">
+              <h3> <i class="fas fa-user-md"></i> General Enquiries </h3>
+              <p>For any general enquiries, please contact us at the following address.</p>
+              <p>Call us at: <span>040-4344-4567</span></p>
+              <p>Email us at: <span>help@kdhhospital.com</span></p>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-md-block" data-aos="fade-left">
+            <img src="https://webstockreview.net/images/clipart-doctor-lady-doctor-11.png" width="100%" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--info-section end-->
+    <!--appointment form start-->
+    <section class="appointment" id="appointment">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="https://webstockreview.net/images/clipart-doctor-lady-doctor-11.png" width="100%" alt="">
+          </div>
+          <div class="col-md-6 content" data-aos="fade-left">
+            <div class="title" style="font-size:30px;font-weight:600;color:#666;padding-top:50px;padding-bottom:15px;">
+              <i class="fas fa-calendar-alt" style="color:#0188DF"></i> 
+              Book an Appointment
+            </div>
+            <p style="color:#666;font-size:16px;">Book an appointment with our expert doctors and get your health checked.</p>
+            <form action="contact.php" method="POST">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Address" name="address" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Problem" name="problem" required>
+              </div>
+              <div class="form-group">
+                <input type="date" class="form-control" placeholder="Date" name="date" required>
+              </div>
+              <div class="form-group">
+                <input type="time" class="form-control" placeholder="Time" name="time" required>
+              </div>
+              <div class="form-group" style="padding-top:15px;padding-bottom:30px;">  
+                <button type="submit" class="btn btn-primary" id="login_butt">Book Appointment</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--appointment form ends-->
     <footer class="footer">
       <div id="footer"></div>
     </footer>

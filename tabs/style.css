@@ -90,6 +90,10 @@ section{
   color:var(--blue);
 }
 
+.box span {
+  color:var(--blue);
+  font-weight: 300;
+}
 header{
   width:100%;
   position: fixed;
@@ -464,6 +468,16 @@ header .fa-times{
   transform: rotate(180deg);
 }
 
+.form-group input{
+  height:4rem;
+  width:100%;
+  padding:0 1rem;
+  margin:1rem 0;
+  border-radius: 15px;
+  font-size: 1.7rem;
+  color:var(--black);
+}
+
 /* media queries  */
 
 @media (max-width:768px){
@@ -563,6 +577,13 @@ header .fa-times{
 }
 
 .checkbox #check {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+#check {
   width: 15px;
   height: 15px;
   border: 1px solid #000;

@@ -74,12 +74,17 @@
 .image-section img {
   width: 125%;
   height: auto;
+  border-radius: 25px;
 }
 
 .content-section .title {
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 600;
+}
+
+.content-section .title i {
+  color: black;
 }
 
 .content-section .content h3 {
@@ -159,9 +164,11 @@
   .content-section .title {
     text-align: center;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
   }
-
+  .content-section .title i {
+    color: black;
+  }
   .content-section .content .button-abt {
     text-align: center;
   }
