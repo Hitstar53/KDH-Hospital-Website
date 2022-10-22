@@ -478,6 +478,33 @@ header .fa-times{
   color:var(--black);
 }
 
+.services .container .title{
+  font-size: 16px;
+  color:var(--black);
+  text-align: center;
+  padding-bottom:5px;
+}
+
+.services .container .box{
+  width:30rem;
+  margin:2rem 1rem;
+  padding:1.5rem;
+  overflow: hidden;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #666;
+  box-shadow: 0 .4rem .6rem rgba(0,0,0,.3);
+}
+
+.services .container .box:hover{
+  background: #c7e0e8;
+  transition: all .1s ease;
+}
+
+.services .container .box .content h3{
+  font-weight: bold;
+}
+
 /* media queries  */
 
 @media (max-width:768px){
