@@ -56,13 +56,9 @@
   <footer id="pat_foot">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for doctors...">
     <ul id="myUL" data-aos="fade-up">
-      <li><a href="#">Adele</a></li>
-      <li><a href="#">Agnes</a></li>
-      <li><a href="#">Billy</a></li>
-      <li><a href="#">Bob</a></li>
-      <li><a href="#">Calvin</a></li>
-      <li><a href="#">Christina</a></li>
-      <li><a href="#">Cindy</a></li>
+      {% for doctor in doctors %}
+      <li><a href="#"> {{ doctor.name }} </a></li>
+      {% endfor %}
       <script src="../../static/main.js"></script>
     </ul>
   <footer class="footer">

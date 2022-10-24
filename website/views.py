@@ -43,9 +43,9 @@ def services():
 
 @views.route('/doctors')
 def doctors():
-    return render_template("tabs/doctors.html",user=current_user)
+    return render_template("tabs/doctors.html",user=current_user,doctors=Doctors.query.all())
 
 @views.route('/patients')
 @login_required
 def patients():
-    return render_template("tabs/patients.html",user=current_user)
+    return render_template("tabs/patients.html",user=current_user,patients=Patients.query.all())
