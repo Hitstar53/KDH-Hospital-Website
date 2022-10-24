@@ -67,6 +67,9 @@ def sign_up():
             flash('Passwords do not match', category='error')
         elif len(password1) < 8:
             flash('Password must be at least 8 characters', category='error')
+        #check if password has at least 1 letter and 1 number
+        #elif not any(char.isdigit() for char in password1) or not any(char.isalpha() for char in password1):
+        #    flash('Password must contain letters & numbers', category='error')
         else:
             new_user = Patients(fname=fname, lname=sname, number=phn, email=email, password=generate_password_hash(password1, method='sha256'))
             db.session.add(new_user)

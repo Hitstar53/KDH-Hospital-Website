@@ -27,8 +27,8 @@ def contact():
         appt = Appointments.query.filter_by(email=email).first()
         if appt:
             flash('Appointment already booked from this email!', category='error')
-        elif len(name)<2:
-            flash('Name must be greater than 2 characters', category='error')
+        elif len(name)<=4:
+            flash('Name must be greater than 4 characters', category='error')
         else:
             new_appt = Appointments(name=name,email=email,number=phn,address=address,problem=problem,date=date,time=time)
             db.session.add(new_appt)
