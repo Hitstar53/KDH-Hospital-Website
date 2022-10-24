@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="../../static/css/footer.css">
   <link rel="stylesheet" href="../../static/css/style.css">
   <!-- jquery cdn link -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script>
     $(function () {
       $('#footer').load('../../static/reusefooter.html');
@@ -35,16 +36,16 @@
             <li><a href="/services">Services</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li>
-              <div class="signup">
+            {% if user.is_authenticated %}
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><div class="signup">
                 <a href="/login">Login</a>
-              </div>
-            </li>
-            <li>
-              <div class="signup">
+              </div></li>
+            <li><div class="signup">
                 <a href="/signup">Sign Up</a>
-              </div>
-            </li>
+              </div></li>
+            {% endif %}
         </ul>
         </nav>
         <div class="fas fa-bars"></div>
@@ -55,6 +56,23 @@
     <!--info-section start-->
     <section class="about" id="about">
       <div class="container" style="padding-bottom:30px;">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alert-dismissible" role="alert" style="background-color:#f8d7da;padding-top:10px;">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true" style="font-size:25px;font-weight:bolder;">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible" role="alert" style="padding-top:10px;">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true" style="font-size:25px;font-weight:bolder;">&times;</span>
+          </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
         <div class="row min-vh-100 align-items-center">
           <div class="col-md-6 content" data-aos="fade-right">
             <div class="title" style="font-size:35px;font-weight:500;color:#666;padding-left:10px;padding-bottom:25px;padding-top: 70px;">

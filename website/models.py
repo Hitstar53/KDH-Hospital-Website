@@ -21,8 +21,10 @@ class Doctors(db.Model, UserMixin):
 
 class Appointments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    date = db.Column(db.DateTime(timezone=True), default=func.now())
-    patient_id = db.Column(db.Integer, db.ForeignKey('patients.id'))
-    doctor_id = db.Column(db.Integer, db.ForeignKey('doctors.id'))
-    patient = db.relationship('Patients', backref=db.backref('appointments', lazy=True))
-    doctor = db.relationship('Doctors', backref=db.backref('appointments', lazy=True))
+    name = db.Column(db.String(150))
+    email = db.Column(db.String(150))
+    number = db.Column(db.Integer)
+    address = db.Column(db.String(150))
+    problem = db.Column(db.String(150))
+    date = db.Column(db.String(150))
+    time = db.Column(db.String(150))
