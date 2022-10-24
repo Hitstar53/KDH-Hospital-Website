@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
     <!-- jquery cdn link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
         $(function () {
-            $('#footer').load('reusefooter.html');
+            $('#footer').load('../../static/reusefooter.html');
         });
     </script>
 </head>
@@ -27,23 +28,23 @@
     <div id="signup">
     <header id="about_head">
         <div class="container">
-            <a href="..\index.html" class="logo"><span>KDH</span> Hospital</a>
+            <a href="/" class="logo"><span>KDH</span> Hospital</a>
             <nav class="nav">
                 <ul>
-                    <li><a href="..\index.html">Home</a></li>
-                    <li><a href="patients.html">Patients</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/patients">Patients</a></li>
+                    <li><a href="/doctors">Doctors</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
                     <li>
                         <div class="signup">
-                            <a href="login.html">Login</a>
+                            <a href="/login">Login</a>
                         </div>
                     </li>
                     <li>
                         <div class="signup">
-                            <a href="signup.html">Sign Up</a>
+                            <a href="/signup">Sign Up</a>
                         </div>
                     </li>
                 </ul>
@@ -51,13 +52,30 @@
             <div class="fas fa-bars"></div>
         </div>
     </header>
-    <form>
+    <form method="POST">
     <div id="sign_foot">
         <div class="container body-content">
             <div class="container">
+                {% with messages = get_flashed_messages(with_categories=true) %} {% if
+                messages %} {% for category, message in messages %} {% if category ==
+                'error' %}
+                <div class="alert alert-danger alert-dismissible" role="alert" style="background-color:#f8d7da;padding-top:10px;">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true" style="font-size:25px;font-weight:bolder;">&times;</span>
+                    </button>
+                </div>
+                {% else %}
+                <div class="alert alert-success alert-dismissible" role="alert" style="padding-top:10px;">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true" style="font-size:25px;font-weight:bolder;">&times;</span>
+                    </button>
+                </div>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
                 <div class="row justify-content-start" style="padding-top:70px;padding-left:14px;font-size:30px;">
                     <div class="resetheader">
-                        <a href="Login.html"><i class="fas fa-arrow-circle-left"></i></a>
+                        <a href="/login"><i class="fas fa-arrow-circle-left"></i></a>
                     </div>
                     <p style="padding-left:10px;font-weight:bold">Reset Password<p>
                 </div>
@@ -68,7 +86,7 @@
                 </div>
                 <div class="row justify-content-start" style="width: 375px;">
                     <div class="col" style="padding-top:10px;">
-                        <input type="email" placeholder="Enter Email" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        <input type="email" placeholder="Enter Email" name="email" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
@@ -79,7 +97,7 @@
                 </div>
                 <div class="row justify-content-start" style="width: 375px;">
                     <div class="col" style="padding-top:10px;">
-                        <input type="password" placeholder="Enter Password" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        <input type="password" placeholder="Enter Password" name="password" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
                         <i class="fas fa-eye" id="togglePassword" onclick="show()"></i>
                     </div>
                 </div>
@@ -90,7 +108,7 @@
                 </div>
                 <div class="row justify-content-start" style="width: 375px;">
                     <div class="col" style="padding-top:10px;">
-                        <input type="password" placeholder="Enter Password" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        <input type="password" placeholder="Enter Password" name="confirm" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
                         <i class="fas fa-eye" id="togglePassword" onclick="show()"></i>
                     </div>
                 </div>
@@ -112,7 +130,7 @@
     <!-- aos js file cdn link  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- custom js link  -->
-    <script src="../main.js"></script>
+    <script src="../../static/main.js"></script>
     <script>
         AOS.init({
             duration: 1000,

@@ -14,13 +14,15 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="tabs/css/footer.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="../static/style.css">
     <!-- jquery cdn link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
         $(function () {
-            $('#footer').load('tabs/reusefooter.html');
+            $('#footer').load('../../static/reusefooter.html');
         });
     </script>
 </head>
@@ -31,18 +33,22 @@
         <a href="#" class="logo"><span>KDH</span> Hospital</a>
         <nav class="nav">
             <ul>
-                <li><a href="..\index.html">Home</a></li>
-                <li><a href="tabs/patients.html">Patients</a></li>
-                <li><a href="tabs/doctors.html">Doctors</a></li>
-                <li><a href="tabs/services.html">Services</a></li>
-                <li><a href="tabs/about.html">About Us</a></li>
-                <li><a href="tabs/contact.html">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/patients">Patients</a></li>
+                <li><a href="/doctors">Doctors</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="/logout">Logout</a></li>
+                {% else %}
                 <li><div class="signup">
-                    <a href="tabs/login.html">Login</a>
+                    <a href="/login">Login</a>
                 </div></li>
                 <li><div class="signup">
-                    <a href="tabs/signup.html">Sign Up</a>
+                    <a href="/signup">Sign Up</a>
                 </div></li>
+                {% endif %}
             </ul>
         </nav>
         <div class="fas fa-bars"></div>
@@ -100,56 +106,56 @@
 <h1 class="heading"><span>'</span> our facilities <span>'</span></h1>
 <div class="box-container">
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/out_team.jfif" title="our team">
-            <img src="imgs/out_team.jfif" alt="">
+        <a href="../static/imgs/out_team.jfif" title="our team">
+            <img src="../static/imgs/out_team.jfif" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/our_lab.jfif" title="our lab">
-            <img src="imgs/our_lab.jfif" alt="">
+        <a href="../static/imgs/our_lab.jfif" title="our lab">
+            <img src="../static/imgs/our_lab.jfif" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/emergency_room.jfif" title="emergency rooms">
-            <img src="imgs/emergency_room.jfif" alt="">
+        <a href="../static/imgs/emergency_room.jfif" title="emergency rooms">
+            <img src="../static/imgs/emergency_room.jfif" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/expert_doctors.jfif" title="expert doctors">
-            <img src="imgs/expert_doctors.jfif" alt="">
+        <a href="../static/imgs/expert_doctors.jfif" title="expert doctors">
+            <img src="../static/imgs/expert_doctors.jfif" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/our_inspiration.jpeg" title="Our Inspiration">
-            <img src="imgs/our_inspiration.jpeg" alt="">
+        <a href="../static/imgs/our_inspiration.jpeg" title="Our Inspiration">
+            <img src="../static/imgs/our_inspiration.jpeg" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/happy_patients.jfif" title="Happy Patients">
-            <img src="imgs/happy_patients.jfif" alt="">
+        <a href="../static/imgs/happy_patients.jfif" title="Happy Patients">
+            <img src="../static/imgs/happy_patients.jfif" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/pharmacy.jfif" title="Well Quipped Pharmacy">
-            <img src="imgs/pharmacy.jfif" alt="">
+        <a href="../static/imgs/pharmacy.jfif" title="Well Quipped Pharmacy">
+            <img src="../static/imgs/pharmacy.jfif" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/ambulance_services.jfif" title="Ambulance Services">
-            <img src="imgs/ambulance_services.jfif" alt="">
+        <a href="../static/imgs/ambulance_services.jfif" title="Ambulance Services">
+            <img src="../static/imgs/ambulance_services.jfif" alt="">
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="imgs/our_care_ward.jfif" title="Our Care Ward">
-            <img src="imgs/our_care_ward.jfif" alt="">
+        <a href="../static/imgs/our_care_ward.jfif" title="Our Care Ward">
+            <img src="../static/imgs/our_care_ward.jfif" alt="">
         </a>
     </div>
 </div>
@@ -166,19 +172,19 @@
         <p> The doctors and the staff gives attention to every minute details. They have lamaze session, baby shower, lactation session which helps a pregnant mother to have a healthy pregnancy journey.</p>
         <h3>- Skylar Bush</h3>
         <span>Oct 5, 2022</span>
-        <img src="imgs/pic1.jpg" alt="">
+        <img src="../static/imgs/pic1.jpg" alt="">
     </div>
     <div class="box" data-aos="fade-up" style="transition:0.8s;">
         <p>hey have a very good quality staff including some doctors who are Alumni of AIMMS . I highly recommend this hospital to others. Many of my relatives have taken treatment from this hospital and are satisfied with their services</p>
         <h3>- Jonas Farrell</h3>
         <span>Oct 21, 2022</span>
-        <img src="imgs/pic2.jpg" alt="">
+        <img src="../static/imgs/pic2.jpg" alt="">
     </div>
     <div class="box" data-aos="fade-left" style="transition:0.8s;">
         <p>KDH Hospital has the best and first multispecialty hospital equipped with the latest equipment for treatment. All the required tests can be done within the hospital. The doctors are well qualified and have a lot of experience in dealing with the stages, and symptoms of the disease. </p>
         <h3>- Allison Lee</h3>
         <span>Nov 10, 2022</span>
-        <img src="imgs/pic3.jpg" alt="">
+        <img src="../static/imgs/pic3.jpg" alt="">
     </div>
 </div>
 </div>
@@ -266,7 +272,7 @@
 <!-- aos js file cdn link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <!-- custom js link  -->
-<script src="main.js"></script>
+<script src="../static/main.js"></script>
 <script>
 AOS.init({
     duration:1000,
