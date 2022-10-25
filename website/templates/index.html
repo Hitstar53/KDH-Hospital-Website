@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../static/css/footer.css">
     <link rel="stylesheet" href="../static/style.css">
     <!-- jquery cdn link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
@@ -40,6 +39,7 @@
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact</a></li>
                 {% if user.is_authenticated %}
+                <li><a href="/appointments">Appointments</a></li>
                 <li><a href="/logout">Logout</a></li>
                 {% else %}
                 <li><div class="signup">

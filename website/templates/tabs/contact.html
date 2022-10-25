@@ -37,6 +37,7 @@
             <li><a href="/about">About Us</a></li>
             <li><a href="/contact">Contact</a></li>
             {% if user.is_authenticated %}
+            <li><a href="/appointments">Appointments</a></li>
             <li><a href="/logout">Logout</a></li>
             {% else %}
             <li><div class="signup">
@@ -66,10 +67,10 @@
           </button>
         </div>
         {% else %}
-        <div class="alert alert-success alert-dismissible" role="alert" style="padding-top:10px;">
+        <div class="alert alert-success alert-dismissible" role="alert" style="padding-top:20px;font-size:16px;">
           {{ message }}
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true" style="font-size:25px;font-weight:bolder;">&times;</span>
+          <button type="button" class="close" data-dismiss="alert" style="padding-top:18px;">
+            <span aria-hidden="true" style="font-size:30px;font-weight:bolder;">&times;</span>
           </button>
         </div>
         {% endif %} {% endfor %} {% endif %} {% endwith %}

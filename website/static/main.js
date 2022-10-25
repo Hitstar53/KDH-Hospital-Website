@@ -21,6 +21,18 @@ $(document).ready(function(){
   });
 });
 
+function cancelAppointment(appointmentId) {
+  var cancel = confirm("Are you sure you want to cancel this appointment?");
+  if (cancel == true) {
+    fetch('/cancelAppointment', {
+      method: 'POST',
+      body: JSON.stringify({ appointmentId: appointmentId })
+    }).then((_res) => {
+      window.location.href = '/appointments';
+    })
+  }
+}
+
 function myFunction() {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;

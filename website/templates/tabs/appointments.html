@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointmentss</title>
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../../static/css/app.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#footer').load('../../static/reusefooter.html');
+        });
+    </script>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <a href="/" class="logo"><span>KDH</span> Hospital</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/patients">Patients</a></li>
+            <li><a href="/doctors">Doctors</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><div class="signup">
+              <a href="/login">Login</a>
+            </div></li>
+            <li><div class="signup">
+              <a href="/signup">Sign Up</a>
+            </div></li>
+            {% endif %}
+        </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+    </div>
+    </header>
+    <!-- appointment display section starts -->
+    <section class="appointment" id="appointment">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="appointment-content">
+                    <div class="title" style="font-size:30px;font-weight:500;color:#666;padding-left:10px;padding-bottom:10px;padding-top:35px;">
+                    <i class="fas fa-clinic-medical" style="color:#0188DF"></i> Your Appointments
+                    </div>
+                    <p class="text" style="font-size:18px;font-weight:500;color:#666;padding-left:10px;">
+                    Here are your appointments. You can cancel them if you want.
+                    <br>
+                    To book an appointment, please <a href="/contact">click here</a>.
+                    </p>
+                    <ol class="list-group list-group-flush" data-aos="fade-right">
+                        {% for appointment in appointments %}
+                        {% if appointment.email == user.email %}
+                        <li class="list-group-item">
+                            <div class="appointment-item">
+                                <div class="appointment-info">
+                                    <h2 class="sub-title" style="font-weight:bold;padding-left:17px;padding-bottom:10px;">Appointment #{{ appointment.id }}</h2>
+                                    <p class="text" style="font-size:18px;font-weight:500;color:#666;padding-left:15px;padding-bottom:10px;">
+                                    <i class="fas fa-user-md" style="color:#0188DF"></i> Patient: {{ appointment.name }}
+                                    <br>
+                                    <i class="fas fa-calendar-alt" style="color:#0188DF"></i> Date: {{ appointment.date }}
+                                    <br>
+                                    <i class="fas fa-clock" style="color:#0188DF"></i> Time: {{ appointment.time }}
+                                    <br>
+                                    <i class="fas fa-exclamation-triangle" style="color:#0188DF"></i> Issue: {{ appointment.problem }}
+                                    </p>
+                                </div>
+                                <div class="appointment-btn" style="padding-left: 10px;">
+                                    <button type="button" class="btn btn-danger" style="font-size:16px;border-radius:20px;padding:5px 20px 5px 20px;" onclick="cancelAppointment({{ appointment.id }})">Cancel</button>
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- appointment display section ends -->
+    <div class="empty-space" style="height: 100px;"></div>
+    <footer class="footer">
+        <div id="footer"></div>
+    </footer>
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- magnific popup js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- aos js file cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- custom js link  -->
+    <script src="../../static/main.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        delay: 400
+      });
+    </script>
+</body>
+</html>

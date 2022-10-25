@@ -510,6 +510,17 @@ header .fa-times{
   font-weight: bold;
 }
 
+.appointment .list-group-item{
+  width:50rem;
+  margin:2rem 1rem;
+  padding:1.5rem;
+  overflow: hidden;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #666;
+  box-shadow: 0 .4rem .6rem rgba(0,0,0,.3);
+}
+
 /* media queries  */
 
 @media (max-width:768px){
@@ -572,6 +583,16 @@ header .fa-times{
   .services .container .title{
     padding-top: 60px;
   }
+    .appointment .list-group-item {
+      width: 30rem;
+      margin: 2rem 1rem;
+      padding: 1.5rem;
+      overflow: hidden;
+      border-radius: 15px;
+      font-size: 14px;
+      color: #666;
+      box-shadow: 0 .4rem .6rem rgba(0, 0, 0, .3);
+    }
 }
 
 #signup {
