@@ -245,7 +245,7 @@ header .fa-bars{
 }
 
 .review{
-  background:url(../images/review-bg.jpg), linear-gradient(var(--black),var(--black)) no-repeat;
+  background:url(imgs/review-bg.jpg), linear-gradient(var(--black),var(--black)) no-repeat;
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
