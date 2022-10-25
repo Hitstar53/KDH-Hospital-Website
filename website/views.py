@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template,request,flash,redirect,url_for
+from flask import Blueprint,render_template,request,flash,redirect,url_for,jsonify
 from flask_login import login_required,current_user
 from website.models import Patients,Doctors,Appointments
 from . import db
@@ -63,5 +63,4 @@ def cancelAppointment():
     if appt:
         db.session.delete(appt)
         db.session.commit()
-        flash('Appointment cancelled successfully!', category='success')
-    return redirect(url_for('views.appointments'))    
+    return jsonify({})
