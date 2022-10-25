@@ -50,7 +50,7 @@ def doctors():
 def patients():
     return render_template("tabs/patients.html",user=current_user,patients=Patients.query.all())
 
-@views.route('/appointments')
+@views.route('/appointments',methods=['GET', 'POST'])
 @login_required
 def appointments():
     return render_template("tabs/appointments.html",user=current_user,appointments=Appointments.query.all())
