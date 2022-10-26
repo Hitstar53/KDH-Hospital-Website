@@ -86,10 +86,10 @@
                         <label>Email</label>
                     </div>
                 </div>
-                <div class="row justify-content-start" style="width: 375px;">
+                <div class="row justify-content-start" style="width: 360px;">
                     <div class="col" style="padding-top:10px;">
                         <input type="email" placeholder="Enter Email" name="email" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-user" id="forgot"></i>
                     </div>
                 </div>
                 <div class="row justify-content-start" style="padding-top:10px;font-size:18px;">
@@ -97,10 +97,10 @@
                         <label>New Password</label>
                     </div>
                 </div>
-                <div class="row justify-content-start" style="width: 375px;">
+                <div class="row justify-content-start" style="width: 360px;">
                     <div class="col" style="padding-top:10px;">
                         <input type="password" placeholder="Enter Password" name="password" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
-                        <i class="fas fa-eye" id="togglePassword" onclick="show()"></i>
+                        <i class="fas fa-eye" id="toggleForPassword" onclick="show()"></i>
                     </div>
                 </div>
                 <div class="row justify-content-start" style="padding-top:10px;font-size:18px;">
@@ -108,10 +108,10 @@
                         <label>Confirm Password</label>
                     </div>
                 </div>
-                <div class="row justify-content-start" style="width: 375px;">
+                <div class="row justify-content-start" style="width: 360px;">
                     <div class="col" style="padding-top:10px;">
                         <input type="password" placeholder="Enter Password" name="confirm" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
-                        <i class="fas fa-eye" id="togglePassword" onclick="show()"></i>
+                        <i class="fas fa-eye" id="toggleForPassword" onclick="show()"></i>
                     </div>
                 </div>
                 <div class="row justify-content-start" style="padding-top:20px;padding-left:15px;padding-bottom:350px;">
@@ -142,7 +142,7 @@
     <script>
         function show() {
             var x = document.getElementById("pswrd");
-            var y = document.getElementById("togglePassword");
+            var y = document.getElementById("toggleForPassword");
             if (x.type === "password") {
                 x.type = "text";
                 y.style.color = "#7f2092";

@@ -657,6 +657,22 @@ header .fa-times{
   margin-left: 310px;
 }
 
+.col #forgot {
+  position: absolute;
+  color: #a3a2a2;
+  font-size: 18px;
+  margin-top: -25px;
+  margin-left: 300px;
+}
+
+.col #toggleForPassword {
+  position: absolute;
+  color: #a3a2a2;
+  font-size: 18px;
+  margin-top: -25px;
+  margin-left: 295px;
+}
+
 .resetheader i {
   color: black;
 }
