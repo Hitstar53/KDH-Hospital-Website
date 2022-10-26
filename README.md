@@ -1,10 +1,10 @@
-#Setup Instructions
-• Clone the repository locally using: git clone
-• Make a python virtual env using: python -m venv venv
-• Activate the venv using: venv\scripts\activate
-• Once activated install all dependencies: pip install -r requirements.txt
-• Create 'hospital' database in mysql
-• run the flask-app by running: main.py
+# Setup Instructions
+• Clone the repository locally using: git clone https://github.com/Hitstar53/hospital-test-app.git  
+• Make a python virtual env using: python -m venv venv  
+• Activate the venv using: venv\scripts\activate  
+• Once activated install all dependencies: pip install -r requirements.txt  
+• Create 'hospital' database in mysql  
+• run the flask-app by running: main.py  
 
 
 # Hospital-Portal-Website
