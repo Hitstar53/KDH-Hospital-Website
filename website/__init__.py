@@ -1,17 +1,18 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 from os import path
 
 db = SQLAlchemy()
-migrate = Migrate()
 DB_NAME = "database.db"
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'kdh5253'
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    #old database
+    #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    #new database
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sqluser:password@localhost/hospital'
     db.init_app(app)
 
     from .views import views
@@ -33,7 +34,6 @@ def create_app():
     return app
 
 def create_database(app):
-    if not path.exists('hospital-test-app/' + DB_NAME):
-        with app.app_context():
-            db.create_all()
-        print('Created Database!')
+    with app.app_context():
+        db.create_all()
+    print('Created Database!')
