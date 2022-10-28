@@ -512,7 +512,6 @@ header .fa-times{
     text-align: center;
     margin: 0;
     padding: 1rem 0;
-    /*border-bottom: 1px var(--blue) solid;*/
   }
 
   header .nav ul li a{
@@ -525,13 +524,14 @@ header .fa-times{
     width: 15rem;
     height: 4.5rem;
   }
-
   .signup a {
     padding: 0;
+    background: none;
+    color: #000;
   }
+
   .signup a:hover {
     background: none;
-    color: #fff;
   }
   header .nav ul li:hover{
     background-color: #c7e0e8;

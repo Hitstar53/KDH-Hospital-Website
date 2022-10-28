@@ -566,10 +566,11 @@ header .fa-times{
 
   .signup a {
     padding: 0;
+    background: none;
+    color: #000;
   }
   .signup a:hover {
     background: none;
-    color: #fff;
   }
   header .nav ul li:hover{
     background-color: #c7e0e8;
