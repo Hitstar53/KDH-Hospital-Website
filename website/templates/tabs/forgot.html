@@ -56,7 +56,7 @@
     <form method="POST">
     <div id="sign_foot">
         <div class="container body-content">
-            <div class="container">
+            <div class="container" data-aos="fade-right">
                 {% with messages = get_flashed_messages(with_categories=true) %} {% if
                 messages %} {% for category, message in messages %} {% if category ==
                 'error' %}
@@ -110,8 +110,8 @@
                 </div>
                 <div class="row justify-content-start" style="width: 360px;">
                     <div class="col" style="padding-top:10px;">
-                        <input type="password" placeholder="Enter Password" name="confirm" id="pswrd" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
-                        <i class="fas fa-eye" id="toggleForPassword" onclick="show()"></i>
+                        <input type="password" placeholder="Enter Password" name="confirm" id="pswrd1" class="form-control" required style="border-radius:20px;background-color:#ebebeb;"></input>
+                        <i class="fas fa-eye" id="toggleForConfirm" onclick="showpass()"></i>
                     </div>
                 </div>
                 <div class="row justify-content-start" style="padding-top:20px;padding-left:15px;padding-bottom:350px;">
@@ -143,6 +143,17 @@
         function show() {
             var x = document.getElementById("pswrd");
             var y = document.getElementById("toggleForPassword");
+            if (x.type === "password") {
+                x.type = "text";
+                y.style.color = "#7f2092";
+            } else {
+                x.type = "password";
+                y.style.color = "#a3a2a2";
+            }
+        }
+        function showpass() {
+            var x = document.getElementById("pswrd1");
+            var y = document.getElementById("toggleForConfirm");
             if (x.type === "password") {
                 x.type = "text";
                 y.style.color = "#7f2092";

@@ -604,13 +604,14 @@ header .fa-times{
 }
 
 #sign_butt {
-  font-size: 15px;
+  font-size: 16px;
   background-color: var(--fros-blue-color);
   border: none;
   border-radius: 20px;
-  padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 9px;
 }
 
 #sign_butt:hover {
@@ -618,13 +619,13 @@ header .fa-times{
 }
 
 #login_butt {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   background-color: indigo;
-  border-radius: 20px;
-  padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  border-radius: 25px;
+  padding: 8px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 #login_butt:hover {
