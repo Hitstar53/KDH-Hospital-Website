@@ -149,11 +149,12 @@ header .nav ul li a{
 
 .signup a {
   text-decoration: none;
-  color: #000;
-  padding: 5px 12px;
+  color: #fff;
+  padding: 5px 15px;
   Letter-spacing: 2px;
   font-size: 20px;
-  border-radius: 8px;
+  border-radius: 15px;
+  background-color: var(--blue);
 }
 
 .signup a:hover {
