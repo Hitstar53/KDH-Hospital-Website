@@ -40,7 +40,9 @@
                 <li><a href="/contact">Contact</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="/appointments">Appointments</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li><div class="signup">
+                    <a href="/logout">Logout</a>
+                </div></li>
                 {% else %}
                 <li><div class="signup">
                     <a href="/login">Login</a>
@@ -130,8 +132,8 @@
     </div>
 
     <div class="box" data-aos="zoom-in">
-        <a href="../static/imgs/our_inspiration.jpeg" title="Our Inspiration">
-            <img src="../static/imgs/our_inspiration.jpeg" alt="">
+        <a href="../static/imgs/our_inspiration.jpg" title="Our Inspiration">
+            <img src="../static/imgs/our_inspiration.jpg" alt="">
         </a>
     </div>
 
