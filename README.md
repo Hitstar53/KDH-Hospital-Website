@@ -1,17 +1,17 @@
 # Setup Instructions
-• Clone the repository locally using: git clone https://github.com/Hitstar53/hospital-test-app.git  
-• Make a python virtual env using: python -m venv venv  
-• Activate the venv using: venv\scripts\activate  
-• Once activated install all dependencies: pip install -r requirements.txt  
-• Create 'hospital' database in mysql  
-• run the flask-app by running: main.py  
+• Clone the repository locally using: `git clone https://github.com/Hitstar53/hospital-test-app.git`    
+• Make a python virtual env using: `python -m venv venv`    
+• Activate the venv using: `venv\scripts\activate`    
+• Once activated install all dependencies: `pip install -r requirements.txt`  
+• Create `hospital` database in mysql  
+• run the flask-app by running: `python app.py`  
 
 
 # Hospital-Portal-Website
 Aim: We aim to create a robust website to better connect the patients and their respective doctors of the hospital and also create a prototype for an online payment system.  
 ## Tech Stack:  
-Frontend: HTML,CSS,JS   
-Backend: Python – Flask framework     
+Frontend: Html, Css (Bootstrap) & Javascript   
+Backend: Python – (Flask) framework     
 Database: SqLite/MySQL    
 
 ## Outline of Website:
