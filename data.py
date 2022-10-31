@@ -1,19 +1,19 @@
 #method 1:
-from werkzeug.security import generate_password_hash,check_password_hash
+#from werkzeug.security import generate_password_hash,check_password_hash
 import sqlite3
 
 conn = sqlite3.connect('instance/database.db')
 cursor = conn.cursor()
 
-#sql = f"INSERT INTO doctors VALUES(1,'John Doe',35,1234567890,'johndoe@gmail.com','cardiology')"
-#cursor.execute(sql)
-#conn.commit()
-
-sql = f"INSERT INTO doctors VALUES(2,'John2 Doe',35,1234567890,'john2doe@gmail.com','neurology')"
+sql = "INSERT INTO doctors VALUES(1,'John Doe',35,1234567890,'johndoe@gmail.com','cardiology')"
 cursor.execute(sql)
 conn.commit()
 
-sql = f"INSERT INTO doctors VALUES(3,'John3 Doe',35,1234567890,'john3doe@gmail.com','dermatology')"
+sql = "INSERT INTO doctors VALUES(2,'John2 Doe',35,1234567890,'john2doe@gmail.com','neurology')"
+cursor.execute(sql)
+conn.commit()
+
+sql = "INSERT INTO doctors VALUES(3,'John3 Doe',35,1234567890,'john3doe@gmail.com','dermatology')"
 cursor.execute(sql)
 conn.commit()
 
