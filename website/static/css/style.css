@@ -676,6 +676,26 @@ header .fa-times{
   margin-left: 295px;
 }
 
+input[type="date"]:before {
+  color: rgba(53, 53, 53, 0.44);
+  content: attr(placeholder);
+}
+
+input[type="date"].full:before {
+  color: black;
+  content: "" !important;
+}
+
+input[type="time"]:before {
+  color: rgba(53, 53, 53, 0.44);
+  content: attr(placeholder);
+}
+
+input[type="time"].full:before {
+  color: black;
+  content: "" !important;
+}
+
 .resetheader i {
   color: black;
 }
