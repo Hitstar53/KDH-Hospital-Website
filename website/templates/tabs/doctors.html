@@ -60,7 +60,7 @@
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for doctors...">
     <ul id="myUL" data-aos="fade-up">
       {% for doctor in doctors %}
-      <li><a href="#"> {{ doctor.name }} </a></li>
+      <li><a href="#">Dr. {{ doctor.name }}: {{ doctor.field }} </a></li>
       {% endfor %}
     </ul>
   <footer class="footer">

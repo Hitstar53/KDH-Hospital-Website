@@ -10,9 +10,9 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'kdh5253'
     #old database
-    #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     #new database
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sqluser:password@localhost/hospital'
+    #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sqluser:password@localhost/hospital'
     db.init_app(app)
 
     from .views import views

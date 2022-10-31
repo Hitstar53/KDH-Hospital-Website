@@ -16,10 +16,9 @@ class Doctors(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150))
     age = db.Column(db.Integer)
-    field = db.Column(db.String(150))
     number = db.Column(mysql.BIGINT)
     email = db.Column(db.String(150), unique=True)
-    password = db.Column(db.String(150))
+    field = db.Column(db.String(150))
 
 class Appointments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
