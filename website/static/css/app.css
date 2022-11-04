@@ -344,6 +344,50 @@ ul {
 
 /*responsive*/
 @media(max-width: 767px) {
+  #myInput {
+    width: 75%;
+  }
+  #myUL li a {
+    width: 75%;
+  }
+  #myUL li a .docname {
+    font-weight: 600;
+  }
+  
+  #myUL li a .docfield {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  #myUL li a .room {
+    position: absolute;
+    margin-top: -37px;
+    right: 85px;
+    font-size: 17px;
+    color: #585858;
+  }
+  
+  #myUL li a .pname {
+    font-weight: 600;
+  }
+  
+  #myUL li a .pemail {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  #myUL li a i {
+    position: absolute;
+    margin-top: -38px;
+    right: 85px;
+    font-size: 24px;
+    color: var(--blue);
+  }
+  
+  #myUL li a:hover {
+    background-color: #b0d5e2;
+    padding-left: 40px;
+  }
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
