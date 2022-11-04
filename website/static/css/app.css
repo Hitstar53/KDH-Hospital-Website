@@ -1,16 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --blue: #0188DF;
+  --black: #354046;
+  --fros-blue-color: #0050d5;
+  --light-blue-color: #16c5ff;
+  --dark-color: #202020;
+  --light-gray: #dedede;
+  --dark-gray: #a1a1a0;
+  --light-color: #fff;
+}
+
 #myInput {
   background-image: url(''); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
+  width: 50%; /* Full-width */
   font-size: 16px; /* Increase font-size */
   font-weight: 500;
-  text-align: center;
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid black; /* Add a grey border */
+  text-align: left;
+  margin: auto;
+  display: block;
+  padding: 12px 20px 12px 25px; /* Add some padding */
+  border: 1.5px solid indigo; /* Add a grey border */
+  border-radius: 25px;
   margin-top: 12px;
   margin-bottom: 12px; /* Add some space below the input */
+  background-color: #f1f1f1; /* Add a grey background color */
+}
+.searchinput i {
+  position: absolute;
+  margin-top: -47px;
+  right: 400px;
+  font-size: 20px;
+  color: #999;
+}
+.searchinput i:hover {
+  color: #666;
 }
 #myUL {
   /* Remove default list styling */
@@ -19,19 +45,51 @@
   margin: 0;
 }
 #myUL li a {
-  border: 1px solid rgb(177, 177, 177); /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
+  border: 1px solid #8304df; /* Add a border to all links */
+  border-radius: 25px;
+  width: 50%;
+  margin: auto;
+  display: block;
+  margin-bottom: 12px;
+  background-color: #f1f1f1;
+  padding: 12px 12px 12px 20px; /* Add some padding */
   text-decoration: none; /* Remove default text underline */
   font-size: 18px; /* Increase the font-size */
-  font-weight: bold;
-  text-align: center;
+  text-align: left;
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
 }
-#myUL li a:hover:not(.header) {
-  background-color: rgb(212, 211, 211); /* Add a hover effect to all links, except for headers */
+#myUL li a .docname {
+  font-weight: 600;
+}
+#myUL li a .docfield {
+  font-size: 16px;
+  color: #999;
+}
+#myUL li a .room {
+  position: absolute;
+  margin-top: -37px;
+  right: 400px;
+  font-size: 17px;
+  color: #585858;
+}
+#myUL li a .pname {
+  font-weight: 600;
+}
+#myUL li a .pemail {
+  font-size: 16px;
+  color: #999;
+}
+#myUL li a i {
+  position: absolute;
+  margin-top: -38px;
+  right: 400px;
+  font-size: 24px;
+  color: var(--blue);
+}
+#myUL li a:hover {
+  background-color: #b0d5e2;
+  padding-left: 50px; 
 }
 .doctor_heading h1 {
   font-size: 30px;
@@ -52,7 +110,7 @@
 .section {
   width: 100%;
   min-height: 100vh;
-  background-color: #ddd;
+  /*background-color: #ddd;*/
 }
 
 .container {

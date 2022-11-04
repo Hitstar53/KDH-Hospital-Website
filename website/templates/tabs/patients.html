@@ -57,12 +57,17 @@
     <h1><i class="fas fa-users" style="color:#0188DF;"></i> Our Patients</h1>
   </div>
   <footer id="pat_foot">
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Patient..">
-  <ul id="myUL" data-aos="fade-up">
+  <div class="searchinput">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Patient..">
+    <i class="fas fa-search"></i>
+  </div>
+  <div class="searchlist">
+  <ul id="myUL">
     {% for patient in patients %}
-    <li><a href="#"> {{ patient.fname }} {{ patient.lname }} </a></li>
+    <li data-aos="fade-up"><a href="#"><div class="pname"> {{ patient.fname }} {{ patient.lname }} </div> <div class="pemail"> {{ patient.email }} </div> <i class="fas fa-user-alt"></i></a></li>
     {% endfor %}
   </ul>
+  </div>
   </footer>
   <footer class="footer">
     <div id="footer"></div>

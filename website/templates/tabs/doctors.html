@@ -57,12 +57,18 @@
     <h1><i class="fas fa-user-md" style="color:#0188DF;"></i> Our Doctors</h1>
   </div>
   <footer id="pat_foot">
+  <div class="searchinput">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for doctors...">
-    <ul id="myUL" data-aos="fade-up">
-      {% for doctor in doctors %}
-      <li><a href="#">Dr. {{ doctor.name }}: {{ doctor.field }} </a></li>
-      {% endfor %}
-    </ul>
+    <i class="fas fa-search"></i>
+  </div>
+  <div class="searchlist">
+  <ul id="myUL">
+    {% for doctor in doctors %}
+    <li data-aos="fade-up"><a href="#"><div class="docname">Dr. {{ doctor.name }} </div> <div class="docfield"> {{ doctor.field }} </div> <div class="room">Room {{ range(100,599) | random }} </div></a></li>
+    {% endfor %}
+  </ul>
+  </div>
+  </footer>
   <footer class="footer">
     <div id="footer"></div>
   </footer>
