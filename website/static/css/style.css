@@ -587,16 +587,22 @@ header .fa-times{
   .services .container .title{
     padding-top: 60px;
   }
-    .appointment .list-group-item {
-      width: 30rem;
-      margin: 2rem 1rem;
-      padding: 1.5rem;
-      overflow: hidden;
-      border-radius: 15px;
-      font-size: 14px;
-      color: #666;
-      box-shadow: 0 .4rem .6rem rgba(0, 0, 0, .3);
-    }
+  .appointment .list-group-item {
+    width: 30rem;
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #666;
+    box-shadow: 0 .4rem .6rem rgba(0, 0, 0, .3);
+  }
+  .loginimage{
+    display: none;
+  }
+  #mapimage {
+    padding-top: 30px;
+  }
 }
 
 #signup {

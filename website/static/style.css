@@ -481,7 +481,9 @@ header .fa-times{
   html{
     font-size: 55%;
   }
-
+  body{
+    overflow-x: hidden;
+  }
   header .fa-bars{
     display: block;
   }
