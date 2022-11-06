@@ -1,6 +1,6 @@
 from flask import Blueprint,render_template,request,flash,redirect,url_for,jsonify
 from flask_login import login_required,current_user
-from website.models import Patients,Doctors,Appointments
+from website.models import Patients,Doctors,Appointments,Payments
 from . import db
 import json
 
@@ -54,6 +54,21 @@ def patients():
 @login_required
 def appointments():
     return render_template("tabs/appointments.html",user=current_user,appointments=Appointments.query.all())
+
+@views.route('/payments',methods=['GET','POST'])
+@login_required
+def payments():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        address = request.form.get('address')+','+request.form.get('city')+','+request.form.get('zipcode')
+        amt = 690
+        pstatus = 'success'
+        new_payment = Payments(name=name,email=email,address=address,amount=amt,payment_status=pstatus)
+        db.session.add(new_payment)
+        db.session.commit()
+        flash('Payment successful!', category='success')
+    return render_template("tabs/payments.html",user=current_user,payments=Payments.query.all())
 
 @views.route('/cancelAppointment',methods=['POST'])
 def cancelAppointment():

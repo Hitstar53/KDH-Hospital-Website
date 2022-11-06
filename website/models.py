@@ -20,7 +20,7 @@ class Doctors(db.Model, UserMixin):
     email = db.Column(db.String(150), unique=True)
     field = db.Column(db.String(150))
 
-class Appointments(db.Model):
+class Appointments(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150))
     email = db.Column(db.String(150))
@@ -29,3 +29,11 @@ class Appointments(db.Model):
     problem = db.Column(db.String(150))
     date = db.Column(db.String(150))
     time = db.Column(db.String(150))
+
+class Payments(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(150))
+    email = db.Column(db.String(150))
+    address = db.Column(db.String(150))
+    amount = db.Column(db.Integer)
+    payment_status = db.Column(db.String(150))

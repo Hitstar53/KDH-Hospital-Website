@@ -38,6 +38,7 @@
             <li><a href="/contact">Contact</a></li>
             {% if user.is_authenticated %}
             <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/payments">Payments</a></li>
             <li><div class="signup">
               <a href="/logout">Logout</a>
             </div></li>
@@ -103,6 +104,7 @@
                                     </p>
                                 </div>
                                 <div class="appointment-btn" style="padding-left: 10px;">
+                                    <a href="/payments"><button type="button" class="btn btn-success" style="font-size:16px;border-radius:20px;padding:5px 25px 5px 25px;margin-right:10px;">Make Payment</button></a>
                                     <button type="button" class="btn btn-danger" style="font-size:16px;border-radius:20px;padding:5px 20px 5px 20px;" onclick="cancelAppointment({{ appointment.id }})">Cancel</button>
                                 </div>
                             </div>

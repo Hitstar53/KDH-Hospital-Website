@@ -1,0 +1,111 @@
+.container form{
+  padding-top:125px;
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 24px;
+  font-weight: 600;
+  color:#333;
+  padding-left: 7px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  border-radius: 25px;
+  padding:10px 15px;
+  padding-left: 20px;
+  font-size: 15px;
+  background-color: #ebebeb;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  padding-left: 10px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  margin-top: 5px;
+  font-size: 18px;
+  background: indigo;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 50px 10px 50px;
+  color:#fff;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #000;
+}
+
+#past .container .title{
+  font-size: 26px;
+  font-weight: 600;
+  color:#333;
+  padding-top: 50px;
+  padding-left: 7px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+#past .container table {
+  margin-top: 20px;
+  border-color: #000;
+  border-radius: 25px;
+  background-color: #ececec;
+}
+
+#past .container table thead tr th{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color:#666;
+  text-transform: uppercase;
+}
+
+#past .container table tbody tr td{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color:#666;
+}

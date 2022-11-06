@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <link rel="stylesheet" href="../../static/css/payment.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#footer').load('../../static/reusefooter.html');
+        });
+    </script>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <a href="/" class="logo"><span>KDH</span> Hospital</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/patients">Patients</a></li>
+            <li><a href="/doctors">Doctors</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/payments">Payments</a></li>
+            <li><div class="signup">
+              <a href="/logout">Logout</a>
+            </div></li>
+            {% else %}
+            <li><div class="signup">
+              <a href="/login">Login</a>
+            </div></li>
+            <li><div class="signup">
+              <a href="/signup">Sign Up</a>
+            </div></li>
+            {% endif %}
+        </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+    </div>
+    </header>
+    <!-- payments section starts -->
+    <section class="payment" id="payment">
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alert-dismissible" role="alert" style="background-color:#f8d7da;padding-top:8px;font-size:16px;">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" style="padding-top:5px;">
+            <span aria-hidden="true" style="font-size:30px;font-weight:bolder;">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible" role="alert" style="padding-top:8px;font-size:16px;">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" style="padding-top:5px;">
+            <span aria-hidden="true" style="font-size:30px;font-weight:bolder;">&times;</span>
+          </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+        <form method="POST">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="inputBox">
+                        <span>Name</span>
+                        <input type="text" class="form-control" placeholder="john deo" name="name" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Email</span>
+                        <input type="email" class="form-control" placeholder="example@example.com" name="email" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Address</span>
+                        <input type="text" class="form-control" placeholder="room - street - locality" name="address" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>City</span>
+                        <input type="text" class="form-control" placeholder="mumbai" name="city" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Country</span>
+                            <input type="text" class="form-control" placeholder="india" name="country" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Zip code</span>
+                            <input type="number" class="form-control" placeholder="123 456" name="zipcode" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="title">Payment Method</h3>
+                    <div class="inputBox">
+                        <span>Cards Accepted</span>
+                        <img src="../../static/imgs/card_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>Name on Card</span>
+                        <input type="text" class="form-control" placeholder="mr. john deo" name="cardname" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Card Number</span>
+                        <input type="number" class="form-control" placeholder="1111-2222-3333-4444" name="cardnumber" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Exp Month</span>
+                        <input type="text" class="form-control" placeholder="january" name="emonth" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Exp Year</span>
+                            <input type="number" class="form-control" placeholder="2022" name="eyear" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV</span>
+                            <input type="number" class="form-control" placeholder="1234" name="cvv" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" id="btn">
+                <input type="submit" value="Checkout" class="submit-btn">
+            </div>
+        </form>
+    </div>
+    </section>
+    <!-- payment section ends -->
+    <!-- show past payment details -->
+    <section class="past" id="past">
+    <div class="container">
+        <h2 class="title" data-aos="fade-right"><i class="fas fa-credit-card" style="color:#0188DF"></i> Past Payments</h2>
+        <table class="table table-responsive-md" data-aos="fade-up">
+            <thead>
+              <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Payment Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for payment in payments %}
+              {% if payment.email == user.email %}
+              <tr>
+                <td> {{ payment.id }} </td>
+                <td> {{ payment.name }} </td>
+                <td> {{ payment.email }} </td>
+                <td> {{ payment.address }} </td>
+                <td> {{ payment.amount }} </td>
+                <td> {{ payment.payment_status }} </td>
+              </tr>
+              {% endif %}
+              {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </section>
+    <div class="empty-space" style="height: 100px;"></div>
+    <footer class="footer">
+        <div id="footer"></div>
+    </footer>
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- magnific popup js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- aos js file cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- custom js link  -->
+    <script src="../../static/main.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        delay: 400
+      });
+    </script>
+</body>
+</html>
