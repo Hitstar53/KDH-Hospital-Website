@@ -14,7 +14,7 @@ Frontend: Html, Css (Bootstrap) & Javascript
 Backend: Python – (Flask) framework     
 Database: SqLite/MySQL    
 ## Hosting:  
-Deployed At: hitstar53.pythonanywhere.com
+Deployed At: https://hitstar53.pythonanywhere.com    
 
 ## Outline of Website:
 •	Homepage of the website  
