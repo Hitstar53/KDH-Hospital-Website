@@ -104,8 +104,8 @@
                                     </p>
                                 </div>
                                 <div class="appointment-btn" style="padding-left: 10px;">
-                                    <a href="/payments"><button type="button" class="btn btn-success" style="font-size:16px;border-radius:20px;padding:5px 25px 5px 25px;margin-right:10px;">Make Payment</button></a>
-                                    <button type="button" class="btn btn-danger" style="font-size:16px;border-radius:20px;padding:5px 20px 5px 20px;" onclick="cancelAppointment({{ appointment.id }})">Cancel</button>
+                                    <a href="/payments"><button type="button" id="pay-butt" class="btn btn-success" style="font-size:16px;border-radius:20px;padding:5px 25px 5px 25px;margin-right:10px;">Make Payment</button></a>
+                                    <button type="button" class="btn btn-danger" id="cancel-butt" style="font-size:16px;border-radius:20px;padding:5px 53px 5px 53px;" onclick="cancelAppointment({{ appointment.id }})">Cancel</button>
                                 </div>
                             </div>
                         </li>

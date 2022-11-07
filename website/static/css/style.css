@@ -597,12 +597,36 @@ header .fa-times{
     color: #666;
     box-shadow: 0 .4rem .6rem rgba(0, 0, 0, .3);
   }
+  .appointment .appointment-btn #pay-butt {
+    margin-bottom: 10px;
+    margin-left: 32px;
+  }
+  .appointment .appointment-btn #cancel-butt {
+    margin-left: 32px;
+  }
+  #appt_butt {
+    margin-left: 100px;
+  }
   .loginimage{
     display: none;
   }
   #mapimage {
     padding-top: 30px;
   }
+}
+
+#appt_butt {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: indigo;
+  border-radius: 25px;
+  padding: 7px;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+#appt_butt:hover {
+  background-color: #000;
 }
 
 #signup {
