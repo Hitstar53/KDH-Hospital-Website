@@ -65,7 +65,9 @@
   <div class="searchlist">
   <ul id="myUL">
     {% for patient in patients %}
+    {% if patient.fname != "admin" %}
     <li data-aos="fade-up"><a href="#"><div class="pname"> {{ patient.fname }} {{ patient.lname }} </div> <div class="pemail"> {{ patient.email }} </div> <i class="fas fa-user-alt"></i></a></li>
+    {% endif %}
     {% endfor %}
   </ul>
   </div>

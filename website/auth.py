@@ -78,3 +78,13 @@ def sign_up():
             flash('Account created!', category='success')
             return redirect(url_for('views.home'))
     return render_template("tabs/signup.html",user=current_user)
+
+def create_admin():
+    admin = Patients.query.filter_by(email='admin@kdh.com').first()
+    if admin:
+        return
+    else:
+        new_admin = Patients(fname='admin', lname='admin', number='1234567890',email='admin@kdh.com',password=generate_password_hash('password', method='sha256'))
+        db.session.add(new_admin)
+        db.session.commit()
+    return

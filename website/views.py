@@ -2,12 +2,14 @@ from flask import Blueprint,render_template,request,flash,redirect,url_for,jsoni
 from flask_login import login_required,current_user
 from website.models import Patients,Doctors,Appointments,Payments
 from . import db
+from .auth import create_admin
 import json
 
 views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
+    create_admin()
     return render_template("index.html",user=current_user)
 
 @views.route('/about')
