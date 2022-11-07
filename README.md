@@ -8,11 +8,13 @@
 
 
 # Hospital-Portal-Website
-Aim: We aim to create a robust website to better connect the patients and their respective doctors of the hospital and also create a prototype for an online payment system.  
+Aim: to create a robust website to better connect the patients and their respective doctors of the hospital and also create an online payment portal for the hospital.  
 ## Tech Stack:  
 Frontend: Html, Css (Bootstrap) & Javascript   
 Backend: Python – (Flask) framework     
 Database: SqLite/MySQL    
+## Hosting:  
+Deployed At: hitstar53.pythonanywhere.com
 
 ## Outline of Website:
 •	Homepage of the website  
@@ -22,12 +24,12 @@ Database: SqLite/MySQL
 •	Services Tab: Information on various services offered by the hospital  
 •	Login Button: Patient Login with forgot password facility    
 •	Login with registered Email & password   
-•	Patient Login: Subtabs: Appointments, Records, Payment Portal  
+•	Patient Login: Subtabs: Appointments, Payment Portal & logout  
 
 ## Timeline
 1/10/22  - Basic structure of project & gather resources (Done)    
-15/10/22 - Complete Frontend aspect of the website (95%)    
-15/11/22 - Complete Backend aspect of the website (90%)    
-27/11/22 - Link frontend with database & final testing/debugging (90%)  
+15/10/22 - Complete Frontend aspect of the website (Done)    
+15/11/22 - Complete Backend aspect of the website (95%)    
+27/11/22 - Link frontend with database & final testing/debugging (95%)  
 
-Overall Website Progress: 80% Complete  
+Overall Website Progress: 95% Complete  
