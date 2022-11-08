@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- iconscout css cdn link -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../../static/css/admin.css">
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#footer').load('../../static/reusefooter.html');
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <!--<img src="images/logo.png" alt="">-->
+                <i class="fas fa-hospital-symbol" style="font-size:34px;color:#0188DF;margin-left:0px;"></i>
+            </div>
+            <a href="/"><span class="logo_name" style="margin-left:2px;">KDH Hospital</span></a>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="/admin-patients">
+                        <i class="uil uil-users-alt"></i>
+                        <span class="link-name">Patients</span>
+                    </a></li>
+                <li><a href="/admin-doctors">
+                        <i class="uil uil-user-nurse"></i>
+                        <span class="link-name">Doctors</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-graph-bar"></i>
+                        <span class="link-name">Analytics</span>
+                    </a></li>
+                <li><a href="/admin-appointments">
+                        <i class="uil uil-phone"></i>
+                        <span class="link-name">Appointments</span>
+                    </a></li>
+                <li><a href="/admin-payments">
+                        <i class="uil uil-transaction"></i>
+                        <span class="link-name">Transactions</span>
+                    </a></li>
+            </ul>
+            <ul class="logout-mode">
+                <li><a href="/logout">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-user"></i>
+                        <span class="text">Patients</span>
+                        <span class="number">500</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-heart-medical"></i>
+                        <span class="text">Doctors</span>
+                        <span class="number">250</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-sign-out-alt"></i>
+                        <span class="text">Logged In Users</span>
+                        <span class="number">75</span>
+                    </div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Transactions</span>
+                </div>
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Name</span>
+                        {% for payment in payments %}
+                        <span class="data-list">{{ payment.name }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        {% for payment in payments %}
+                        <span class="data-list">{{ payment.email }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Billing Address</span>
+                        {% for payment in payments %}
+                        <span class="data-list">{{ payment.address }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Amount</span>
+                        {% for payment in payments %}
+                        <span class="data-list">{{ payment.amount }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Status</span>
+                        {% for payment in payments %}
+                        <span class="data-list">{{ payment.payment_status }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../../static/admin.js"></script>
+</body>
+</html>

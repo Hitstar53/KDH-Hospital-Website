@@ -36,11 +36,17 @@
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/contact">Contact</a></li>
                     {% if user.is_authenticated %}
+                    {% if user.fname == 'admin' %}
+                    <li><div class="signup">
+                        <a href="/admin">Admin</a>
+                    </div></li>
+                    {% else %}
                     <li><a href="/appointments">Appointments</a></li>
                     <li><a href="/payments">Payments</a></li>
                     <li><div class="signup">
                         <a href="/logout">Logout</a>
                     </div></li>
+                    {% endif %}
                     {% else %}
                     <li><div class="signup">
                         <a href="/login">Login</a>

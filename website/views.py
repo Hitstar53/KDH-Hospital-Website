@@ -12,6 +12,31 @@ def home():
     create_admin()
     return render_template("index.html",user=current_user)
 
+@views.route('/admin')
+@login_required
+def admin():
+    return render_template("tabs/admin.html",user=current_user,patients=Patients.query.all())
+
+@views.route('/admin-doctors')
+@login_required
+def admin_doctors():
+    return render_template("tabs/ad_doctors.html",user=current_user,doctors=Doctors.query.all())
+
+@views.route('/admin-patients')
+@login_required
+def admin_patients():
+    return render_template("tabs/ad-patients.html",user=current_user,patients=Patients.query.all())
+
+@views.route('/admin-appointments')
+@login_required
+def admin_appointments():
+    return render_template("tabs/ad-appointments.html",user=current_user,appointments=Appointments.query.all())
+
+@views.route('/admin-payments')
+@login_required
+def admin_payments():
+    return render_template("tabs/ad-transactions.html",user=current_user,payments=Payments.query.all())
+
 @views.route('/about')
 def about():
     return render_template("tabs/about.html",user=current_user)
