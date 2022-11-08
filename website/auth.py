@@ -59,7 +59,6 @@ def sign_up():
         email = request.form.get('email')
         password1 = request.form.get('password')
         password2 = request.form.get('confirm')
-        print(fname, sname, phn, email, password1, password2)
         user = Patients.query.filter_by(email=email).first()
         if user:
             flash('Email already exists.', category='error')

@@ -1,4 +1,5 @@
 from flask import Blueprint,render_template,request,flash,redirect,url_for,jsonify
+from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import login_required,current_user
 from website.models import Patients,Doctors,Appointments,Payments
 from . import db
@@ -12,19 +13,75 @@ def home():
     create_admin()
     return render_template("index.html",user=current_user)
 
-@views.route('/admin')
+@views.route('/admin',methods=['GET', 'POST'])
 @login_required
 def admin():
     return render_template("tabs/admin.html",user=current_user,patients=Patients.query.all())
 
-@views.route('/admin-doctors')
+@views.route('/admindoctors',methods=['GET', 'POST'])
 @login_required
-def admin_doctors():
+def admindoctors():
+    if request.method == 'POST':
+        formid = request.args.get('formid', 1, type=int)
+        if formid == 1:
+            name = request.form.get('name')
+            age = request.form.get('age')
+            number = request.form.get('number')
+            email = request.form.get('email')
+            field = request.form.get('field')
+            doctor = Doctors(name=name,age=age,number=number,email=email,field=field)
+            db.session.add(doctor)
+            db.session.commit()
+            flash('Doctor Added Successfully',category='success')
+        if formid == 2:
+            name = request.form.get('delname')
+            email = request.form.get('delemail')
+            doctor = Doctors.query.filter_by(email=email).first()
+            if doctor:
+                db.session.delete(doctor)
+                db.session.commit()
+                flash('Doctor Deleted Successfully',category='success')
+            else:
+                flash('No Doctor Found',category='error')
+        return redirect(url_for('views.admindoctors'))
     return render_template("tabs/ad_doctors.html",user=current_user,doctors=Doctors.query.all())
 
-@views.route('/admin-patients')
+@views.route('/adminpatients',methods=['GET', 'POST'])
 @login_required
-def admin_patients():
+def adminpatients():
+    if request.method == 'POST':
+        formid = request.args.get('formid', 1, type=int)
+        if formid == 1:
+            fname = request.form.get('fname')
+            lname = request.form.get('lname')
+            phn = request.form.get('phone')
+            email = request.form.get('email')
+            password1 = request.form.get('password')
+            password2 = request.form.get('confirm')
+            patient = Patients.query.filter_by(email=email).first()
+            if patient:
+                flash('Email already exists.', category='error')
+            elif password1 != password2:
+                flash('Passwords do not match', category='error')
+            elif len(password1) < 8:
+                flash('Password must be at least 8 characters', category='error')
+            else:
+                patient = Patients(fname=fname, lname=lname, number=phn, email=email, password=generate_password_hash(password1, method='sha256'))
+                db.session.add(patient)
+                db.session.commit()
+                flash('Patient Added Successfully',category='success')
+        if formid == 2:
+            fname = request.form.get('fname')
+            lname = request.form.get('lname')
+            email = request.form.get('delemail')
+            patient = Patients.query.filter_by(email=email).first()
+            if patient:
+                db.session.delete(patient)
+                db.session.commit()
+                flash('Patient Deleted Successfully',category='success')
+            else:
+                flash('No Patient Found',category='error')
+        return redirect(url_for('views.adminpatients'))
     return render_template("tabs/ad-patients.html",user=current_user,patients=Patients.query.all())
 
 @views.route('/admin-appointments')

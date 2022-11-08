@@ -19,6 +19,7 @@
     --box2-color: #FFE6AC;
     --box3-color: #E7D1FC;
     --title-icon-color: #fff;
+    --form-color: #ebebeb;
 
     /* ====== Transition ====== */
     --tran-05: all 0.5s ease;
@@ -42,6 +43,7 @@ body.dark {
     --box2-color: #3A3B3C;
     --box3-color: #3A3B3C;
     --title-icon-color: #CCC;
+    --form-color: #242526;
 }
 
 /* === Custom Scroll Bar CSS === */
@@ -469,6 +471,64 @@ nav.close~.dashboard .top .sidebar-toggle {
     font-weight: 400;
     margin-top: 20px;
     white-space: nowrap;
+    color: var(--text-color);
+}
+
+#addModal .modal-content {
+    border-radius: 20px;
+}
+
+#addModal .modal-header {
+    color: var(--text-color);
+    border-bottom: none;
+}
+
+#addModal .modal-content .modal-body .form-control {
+    border: 1px solid var(--border-color);
+    background-color: var(--form-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px; 
+}
+
+#delModal .modal-content {
+    border-radius: 20px;
+}
+
+#delModal .modal-header {
+    color: var(--text-color);
+    border-bottom: none;
+}
+
+#delModal .modal-content .modal-body .form-control {
+    border: 1px solid var(--border-color);
+    background-color: var(--form-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+body.dark #addModal .modal-content {
+    background-color: var(--form-color);
+}
+
+body.dark #addModal .modal-content .modal-body label {
+    color: var(--text-color);
+}
+
+body.dark #delModal .modal-content {
+    background-color: var(--form-color);
+}
+
+body.dark #delModal .modal-content .modal-body label {
     color: var(--text-color);
 }
 

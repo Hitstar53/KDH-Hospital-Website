@@ -19,6 +19,12 @@
     <!-- jquery cdn link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- bootstrap css cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script>
         $(function () {
             $('#footer').load('../../static/reusefooter.html');
@@ -35,16 +41,16 @@
             <a href="/"><span class="logo_name" style="margin-left:2px;">KDH Hospital</span></a>
         </div>
         <div class="menu-items">
-            <ul class="nav-links">
+            <ul class="nav-links" style="margin-left:-32px;">
                 <li><a href="/admin">
                         <i class="uil uil-estate"></i>
                         <span class="link-name">Dashboard</span>
                     </a></li>
-                <li><a href="/admin-patients">
+                <li><a href="/adminpatients">
                         <i class="uil uil-users-alt"></i>
                         <span class="link-name">Patients</span>
                     </a></li>
-                <li><a href="/admin-doctors">
+                <li><a href="/admindoctors">
                         <i class="uil uil-user-nurse"></i>
                         <span class="link-name">Doctors</span>
                     </a></li>
@@ -61,7 +67,7 @@
                         <span class="link-name">Transactions</span>
                     </a></li>
             </ul>
-            <ul class="logout-mode">
+            <ul class="logout-mode" style="margin-left:-32px;">
                 <li><a href="/logout">
                         <i class="uil uil-signout"></i>
                         <span class="link-name">Logout</span>
@@ -117,15 +123,75 @@
                     <i class="uil uil-clock-three"></i>
                     <span class="text">Doctors</span>
                     <!-- button to add -->
-                    <button type="button" class="btn btn-primary" style="margin-left:20px;border-radius:15px;" data-toggle="modal"
-                        data-target="#myModal">
+                    <button type="button" class="btn btn-primary" style="margin-left:20px;border-radius:15px;" data-bs-toggle="modal" data-bs-target="#addModal">
                         Add
                     </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="addModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Add Doctor</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <!-- add doctor form -->
+                                    <form method="POST" action="{{ url_for('views.admindoctors',formid=1) }}">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Age</label>
+                                            <input type="number" class="form-control" id="age" name="age" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone</label>
+                                            <input type="number" class="form-control" id="phone" name="number" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="specialization" class="form-label">Field</label>
+                                            <input type="text" class="form-control" id="field" name="field" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-success" style="border-radius:15px;">Add Doctor</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- button to delete -->
-                    <button type="button" class="btn btn-danger" style="margin-left:10px;border-radius:15px;" data-toggle="modal"
-                        data-target="#myModal2">
+                    <button type="button" class="btn btn-danger" style="margin-left:10px;border-radius:15px;" data-bs-toggle="modal" data-bs-target="#delModal">
                         Delete
                     </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="delModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Remove Doctor</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <!-- add doctor form -->
+                                    <form method="POST" action="{{ url_for('views.admindoctors',formid=2) }}">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="delname" name="delname" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="delemail" name="delemail" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-danger" style="border-radius:15px;">Remove</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="activity-data">
                     <div class="data names">
