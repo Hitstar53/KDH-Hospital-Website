@@ -52,7 +52,7 @@
                         <i class="uil uil-graph-bar"></i>
                         <span class="link-name">Analytics</span>
                     </a></li>
-                <li><a href="/admin-appointments">
+                <li><a href="/adminappointments">
                         <i class="uil uil-phone"></i>
                         <span class="link-name">Appointments</span>
                     </a></li>
@@ -81,7 +81,6 @@
     <section class="dashboard">
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
-
             <div class="search-box">
                 <i class="uil uil-search"></i>
                 <input type="text" placeholder="Search here...">
@@ -115,43 +114,25 @@
             <div class="activity">
                 <div class="title">
                     <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Transactions</span>
+                    <span class="text">Latest Analytics</span>
                 </div>
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        {% for payment in payments %}
-                        <span class="data-list">{{ payment.name }}</span>
-                        {% endfor %}
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        {% for payment in payments %}
-                        <span class="data-list">{{ payment.email }}</span>
-                        {% endfor %}
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Billing Address</span>
-                        {% for payment in payments %}
-                        <span class="data-list">{{ payment.address }}</span>
-                        {% endfor %}
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Amount</span>
-                        {% for payment in payments %}
-                        <span class="data-list">{{ payment.amount }}</span>
-                        {% endfor %}
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        {% for payment in payments %}
-                        <span class="data-list">{{ payment.payment_status }}</span>
-                        {% endfor %}
+                <div class="activity-data" style="margin-left:100px;">
+                    <div class="charts">
+                        <div class="charts-card">
+                            <p class="chart-title">Most Searched Medical Fields</p>
+                            <div id="bar-chart"></div>
+                        </div>
+                        <div class="charts-card">
+                            <p class="chart-title">New Patients & Doctors</p>
+                            <div id="area-chart"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <script src="../../static/admin.js"></script>
 </body>
 </html>

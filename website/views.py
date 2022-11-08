@@ -84,10 +84,40 @@ def adminpatients():
         return redirect(url_for('views.adminpatients'))
     return render_template("tabs/ad-patients.html",user=current_user,patients=Patients.query.all())
 
-@views.route('/admin-appointments')
+@views.route('/adminappointments',methods=['GET', 'POST'])
 @login_required
-def admin_appointments():
+def adminappointments():
+    if request.method == 'POST':
+        formid = request.args.get('formid', 1, type=int)
+        if formid == 1:
+            name = request.form.get('name')
+            email = request.form.get('email')
+            phn = request.form.get('phone')
+            address = request.form.get('address')
+            problem = request.form.get('problem')
+            date = request.form.get('date')
+            time = request.form.get('time')
+            new_appt = Appointments(name=name,email=email,number=phn,address=address,problem=problem,date=date,time=time)
+            db.session.add(new_appt)
+            db.session.commit()
+            flash('Appointment Added Successfully',category='success')
+        if formid == 2:
+            name = request.form.get('delname')
+            email = request.form.get('delemail')
+            appointment = Appointments.query.filter_by(email=email).first()
+            if appointment:
+                db.session.delete(appointment)
+                db.session.commit()
+                flash('Appointment Deleted Successfully',category='success')
+            else:
+                flash('No Appointment Found',category='error')
+        return redirect(url_for('views.adminappointments'))
     return render_template("tabs/ad-appointments.html",user=current_user,appointments=Appointments.query.all())
+
+@views.route('/adminanalytics')
+@login_required
+def adminanalytics():
+    return render_template("tabs/ad-analytics.html",user=current_user)
 
 @views.route('/admin-payments')
 @login_required
