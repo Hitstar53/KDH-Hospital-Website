@@ -29,7 +29,7 @@ Deployed At: https://hitstar53.pythonanywhere.com
 ## Timeline
 1/10/22  - Basic structure of project & gather resources (Done)    
 15/10/22 - Complete Frontend aspect of the website (Done)    
-15/11/22 - Complete Backend aspect of the website (95%)    
-27/11/22 - Link frontend with database & final testing/debugging (95%)  
+15/11/22 - Complete Backend aspect of the website (Done)    
+27/11/22 - Link frontend with database & final testing/debugging (Done)  
 
-Overall Website Progress: 95% Complete  
+Overall Website Progress: 100% Complete  
