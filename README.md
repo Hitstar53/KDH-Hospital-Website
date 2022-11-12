@@ -6,6 +6,8 @@
 • Create `hospital` database in mysql  
 • run the flask-app by running: `python app.py`  
 
+# Final Result
+![image](https://user-images.githubusercontent.com/84141920/201469032-999ecd84-35ae-47ba-ae5f-30cdd47b522d.png)
 
 # Hospital-Portal-Website
 Aim: to create a robust website to better connect the patients and their respective doctors of the hospital and also create an online payment portal for the hospital.  
