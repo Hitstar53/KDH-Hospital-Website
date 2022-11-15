@@ -36,7 +36,7 @@
         </div>
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="/admin">
                         <i class="uil uil-estate"></i>
                         <span class="link-name">Dashboard</span>
                     </a></li>
@@ -90,7 +90,7 @@
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <i class="uil uil-tachometer-fast-alt" id="titleicon"></i>
                     <span class="text">Dashboard</span>
                 </div>
                 <div class="boxes">
@@ -113,7 +113,7 @@
             </div>
             <div class="activity">
                 <div class="title">
-                    <i class="uil uil-clock-three"></i>
+                    <i class="uil uil-clock-three" id="titleicon"></i>
                     <span class="text">Recent Activity</span>
                 </div>
                 <div class="activity-data">
@@ -160,5 +160,15 @@
         </div>
     </section>
     <script src="../../static/admin.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

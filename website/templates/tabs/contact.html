@@ -16,11 +16,22 @@
   <link rel="stylesheet" href="../../static/css/footer.css">
   <link rel="stylesheet" href="../../static/css/style.css">
   <!-- jquery cdn link -->
+  <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script>
     $(function () {
       $('#footer').load('../../static/reusefooter.html');
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#mydatepicker").datepicker({
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true
+      });
     });
   </script>
 </head>
@@ -147,7 +158,7 @@
                 <input type="text" class="form-control" placeholder="Your Problem" name="problem" required>
               </div>
               <div class="form-group">
-                <input type="date" class="form-control" name="date" required>
+                <input type="date" onfocus="this.min=new Date().toISOString().split('T')[0]" class="form-control" name="date" required>
               </div>
               <div class="form-group">
                 <input type="time" class="form-control" name="time" required>
@@ -198,8 +209,6 @@
     <footer class="footer">
       <div id="footer"></div>
     </footer>
-    <!-- jquery cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- magnific popup js link  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <!-- aos js file cdn link  -->

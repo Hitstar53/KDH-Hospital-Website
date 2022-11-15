@@ -97,7 +97,7 @@
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <i class="uil uil-tachometer-fast-alt" id="titleicon"></i>
                     <span class="text">Dashboard</span>
                 </div>
                 <div class="boxes">
@@ -120,7 +120,7 @@
             </div>
             <div class="activity">
                 <div class="title">
-                    <i class="uil uil-clock-three"></i>
+                    <i class="uil uil-clock-three" id="titleicon"></i>
                     <span class="text">Patients</span>
                     <!-- button to add -->
                     <button type="button" class="btn btn-primary" style="margin-left:20px;border-radius:15px;" data-bs-toggle="modal"
@@ -202,6 +202,10 @@
                             </div>
                         </div>
                     </div>
+                    <button type="button" class="btn btn-success" style="margin-left:10px;border-radius:15px;" data-bs-toggle="modal"
+                        data-bs-target="#editModal">
+                        <i class="fas fa-pencil-alt" style="font-size:18px;" id="edit"></i>
+                    </button>
                 </div>
                 <div class="activity-data">
                     <div class="data names">
@@ -249,5 +253,15 @@
         </div>
     </section>
     <script src="../../static/admin.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

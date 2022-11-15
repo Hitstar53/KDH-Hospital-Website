@@ -52,7 +52,7 @@
                         <i class="uil uil-graph-bar"></i>
                         <span class="link-name">Analytics</span>
                     </a></li>
-                <li><a href="/admin-appointments">
+                <li><a href="/adminappointments">
                         <i class="uil uil-phone"></i>
                         <span class="link-name">Appointments</span>
                     </a></li>
@@ -91,7 +91,7 @@
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <i class="uil uil-tachometer-fast-alt" id="titleicon"></i>
                     <span class="text">Dashboard</span>
                 </div>
                 <div class="boxes">
@@ -114,7 +114,7 @@
             </div>
             <div class="activity">
                 <div class="title">
-                    <i class="uil uil-clock-three"></i>
+                    <i class="uil uil-clock-three" id="titleicon"></i>
                     <span class="text">Recent Transactions</span>
                 </div>
                 <div class="activity-data">
@@ -153,5 +153,15 @@
         </div>
     </section>
     <script src="../../static/admin.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
