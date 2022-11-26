@@ -3,7 +3,7 @@
 • Make a python virtual env using: `python -m venv venv`    
 • Activate the venv using: `venv\scripts\activate`    
 • Once activated install all dependencies: `pip install -r requirements.txt`  
-• Create `hospital` database in mysql  
+• Create `hospital` database in mysql if using mysql db (not needed for sqLite)    
 • run the flask-app by running: `python app.py`  
 
 # Final Result
@@ -16,7 +16,8 @@ Frontend: Html, Css (Bootstrap) & Javascript
 Backend: Python – (Flask) framework     
 Database: SqLite/MySQL    
 ## Hosting:  
-Deployed At: https://hitstar53.pythonanywhere.com    
+Deployed At: https://hitstar53.pythonanywhere.com      
+Admin Access: email: `admin@kdh.com` & password: `password`  
 
 ## Outline of Website:
 •	Homepage of the website  
