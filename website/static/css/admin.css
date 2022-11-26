@@ -533,6 +533,49 @@ nav.close~.dashboard .top .sidebar-toggle {
     margin-bottom: 15px;
 }
 
+#editModal .modal-content {
+    border-radius: 20px;
+}
+
+#editModal .modal-header {
+    color: var(--text-color);
+    border-bottom: none;
+}
+
+#editModal .modal-content .modal-body .form-control {
+    border: 1px solid var(--border-color);
+    background-color: var(--form-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+#editModal .modal-content .modal-body .form-select {
+    border: 1px solid var(--border-color);
+    background-color: var(--form-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+#editModal .modal-content .modal-body .form-select option {
+    background-color: var(--form-color);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
 body.dark #addModal .modal-content {
     background-color: var(--form-color);
 }
@@ -547,6 +590,24 @@ body.dark #delModal .modal-content {
 
 body.dark #delModal .modal-content .modal-body label {
     color: var(--text-color);
+}
+
+body.dark #editModal .modal-content {
+    background-color: var(--form-color);
+}
+
+body.dark #editModal .modal-content .modal-body label {
+    color: var(--text-color);
+}
+
+body.dark #editModal .modal-content .modal-body .form-select option {
+    background-color: var(--form-color);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    border-radius: 25px;
+    margin-bottom: 15px;
 }
 
 .charts {

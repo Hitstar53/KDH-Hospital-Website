@@ -478,8 +478,26 @@ header .fa-times{
   color:var(--black);
 }
 
+.form-group select {
+  height:4rem;
+  width:100%;
+  padding:0 1rem;
+  margin:1rem 0;
+  border-radius: 15px;
+  font-size: 1.7rem;
+  color:var(--black);
+}
+
 .form-control {
   background-color: #ebebeb;
+}
+
+.form-control option {
+  background-color: #ebebeb;
+  border-radius: 15px;
+  outline: none;
+  font-size: 1.75rem;
+  color:var(--black);
 }
 
 .services .container .title{

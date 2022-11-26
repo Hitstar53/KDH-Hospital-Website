@@ -43,6 +43,24 @@ def admindoctors():
                 flash('Doctor Deleted Successfully',category='success')
             else:
                 flash('No Doctor Found',category='error')
+        if formid == 3:
+            select = request.form.get('docselect')
+            name = request.form.get('name')
+            age = request.form.get('age')
+            phn = request.form.get('phone')
+            email = request.form.get('email')
+            field = request.form.get('field')
+            doctor = Doctors.query.filter_by(id=select).first()
+            if doctor:
+                doctor.name = name
+                doctor.age = age
+                doctor.number = phn
+                doctor.email = email
+                doctor.field = field
+                db.session.commit()
+                flash('Doctor Updated Successfully',category='success')
+            else:
+                flash('No Doctor Found',category='error')
         return redirect(url_for('views.admindoctors'))
     return render_template("tabs/ad_doctors.html",user=current_user,doctors=Doctors.query.all())
 
@@ -79,6 +97,22 @@ def adminpatients():
                 db.session.delete(patient)
                 db.session.commit()
                 flash('Patient Deleted Successfully',category='success')
+            else:
+                flash('No Patient Found',category='error')
+        if formid == 3:
+            select = request.form.get('patselect')
+            fname = request.form.get('fname')
+            lname = request.form.get('lname')
+            phn = request.form.get('phone')
+            email = request.form.get('email')
+            patient = Patients.query.filter_by(id=select).first()
+            if patient:
+                patient.fname = fname
+                patient.lname = lname
+                patient.number = phn
+                patient.email = email
+                db.session.commit()
+                flash('Patient Updated Successfully',category='success')
             else:
                 flash('No Patient Found',category='error')
         return redirect(url_for('views.adminpatients'))
@@ -136,6 +170,8 @@ def contact():
         phn = request.form.get('phone')
         address = request.form.get('address')
         problem = request.form.get('problem')
+        select = request.form.get('dcselect')
+        doctor = Doctors.query.filter_by(id=select).first()
         date = request.form.get('date')
         time = request.form.get('time')
         #appt = Appointments.query.filter_by(email=email).first()
@@ -144,12 +180,12 @@ def contact():
         if len(name)<=4:
             flash('Name must be greater than 4 characters', category='error')
         else:
-            new_appt = Appointments(name=name,email=email,number=phn,address=address,problem=problem,date=date,time=time)
+            new_appt = Appointments(name=name,email=email,number=phn,address=address,problem=problem,doctor=doctor.name,date=date,time=time)
             db.session.add(new_appt)
             db.session.commit()
             flash('Appointment booked successfully!', category='success')
             return redirect(url_for('views.contact'))
-    return render_template("tabs/contact.html",user=current_user)
+    return render_template("tabs/contact.html",user=current_user,doctors=Doctors.query.all())
 
 @views.route('/services')
 def services():

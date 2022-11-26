@@ -27,6 +27,7 @@ class Appointments(db.Model, UserMixin):
     number = db.Column(db.BIGINT)
     address = db.Column(db.String(150))
     problem = db.Column(db.String(150))
+    doctor = db.Column(db.String(150))
     date = db.Column(db.String(150))
     time = db.Column(db.String(150))
 
